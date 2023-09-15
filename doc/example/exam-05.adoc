@@ -1,0 +1,66 @@
+=== Exam-05. ServerSocket에서 사용할 port를 현재 사용 중인 port로 지정해 동작을 확인해 보자.
+
+아래의 과정을 따라 ServerSocket을 생성하여 port 충돌 과정을 확인해 보자.
+
+
+1. ss commmand를 이용해 사용중인 port를 확인한다.
++
+--
+[source,console]
+----
+~$ ss -ltn
+State   Recv-Q   Send-Q     Local Address:Port     Peer Address:Port    Process
+LISTEN  0        4096       127.0.0.53%lo:53            0.0.0.0:*
+LISTEN  0        50                     *:1234                *:*
+----
+* 사용 중인 port가 없을 경우, nc를 이용해 임의의 port를 열어 둔다.
+--
++
+2. 사용할 port를 찾아 ServerSocket object를 생성한다.
++
+--
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam05.java[lines=11,indent=0]
+...
+include::../../src/main/java/com/nhnacademy/example/Exam05.java[lines=18..20,indent=0]
+----
+* try-with-resources 
+footnote:[https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html[Oracle Tutorials : The try-with-resources Statement]] 
+footnote:[https://www.baeldung.com/java-try-with-resources[Baeldung : Java – Try with Resources]]
+를 이용해 serverSocket을 close 하지 않고 종료하는 것을 방지한다.
+--
++
+3. IOException 발생시 내용 확인을 위해 메시지를 출력한다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam05.java[lines=18..20,indent=0]
+----
++
+4. Source code를 build해서 실행한다.
++
+[source,console]
+----
+~$ javac Exam05.java
+~$ java Exam05
+----
++
+5. 열려 있는 port를 지정하였으므로, exception이 발생한다.
++
+--
+[source,console]
+----
+~$ java Exam05
+java.net.BindException: Address already in use (Bind failed)
+----
+* BindException은 IOException의 extend class로서 IOException으로 catch 가능하다. 
+--
++
+
+
+==== Source Code
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam05.java[]
+----

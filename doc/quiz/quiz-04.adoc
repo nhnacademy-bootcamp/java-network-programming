@@ -1,0 +1,32 @@
+=== Quiz-04. Client socket을 server에 연결하여 server에서 보내오는 문자열을 출력하라.
+
+{empty} + 
+
+앞 예제를 통해서 간단하게 data 수신 방법에 대해 배웠다.
+
+{empty} + 
+
+다음 조건을 만족하도록 프로그램을 구성해 보자.
+
+* Server에 접속한다.
+
+* socket을 통해 문자열을 받는다.
+
+* 받은 문자열이 "exit"인 경우, 프로그램을 종료한다.
+
+* 받은 문자열이 "exit"이 아닌 경우, 출력한다.
+
+* 프로그램은 ip address와 port를 옵션으로 받을 수 있다.
+
+** java Quiz04 
+** java Quiz04 localhost
+** java Quiz04 localhost 1234
+
+* 기본 ip address는 localhost로 하고, 기본 port는 1234로 한다.
+
+* 테스트를 위한 server는 아래와 같이 실행한다.
+
+[source,console]
+----
+~$ nc -l 1234
+----

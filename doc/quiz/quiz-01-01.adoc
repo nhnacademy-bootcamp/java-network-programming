@@ -1,0 +1,14 @@
+=== Quiz-01-01. try-with-resources를 이용해 socket 자원을 관리하라.
+
+프로그램에서 socket, file등 유한한 시스템 자원을 사용할 경우, 필요 없는 시점에 이를 해제 시켜줘야 한다.
+
+Java에서는 GC(Garbage Collection)이 지원되어 별도의 해제가 없더라도 반환이 되기는 하지만, 그 시점이 언제될지 알 수가 없다.
+따라서, 자원의 활용은 최대한 미루고 최소한의 시간동안만 이용할 수 있도록 처리하는 것이 좋다.
+
+이를 위해 Java에서는 자원 관리의 효율적으로 하기 위해 try-with-resources를 지원한다.
+
+* Quiz-01을 try-with-resources를 이용하도록 수정하라.
+* try-with-resources를 이용할 경우, 어떠한 장점과 어떠한 단점이 있는지 생각해 보자.
+
+
+

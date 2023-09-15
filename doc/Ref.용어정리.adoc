@@ -1,0 +1,9 @@
+== 용어 정리
+
+* https://en.wikipedia.org/wiki/Fully_qualified_domain_name[FQDN(Fully Qualified Domain Name)]
+** Absolute Domain Name
+** hostname을 포함한 전체 domain name
+* https://en.wikipedia.org/wiki/Fully_qualified_domain_name#relative%20domain%20names[PQDN(Partially Qualified Domain Name)]
+** Relative Domain Name
+** DNS root에 대해 모든 레이블을 포함하지 않는다.
+** Hostname을 사용 가능

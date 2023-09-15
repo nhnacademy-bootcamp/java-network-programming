@@ -1,0 +1,32 @@
+== Socket Type
+
+
+=== Datagram Sockets
+
+* UDP(User Datagram Protocol)를 사용하는 무연결 socket
+* Datagram socket에서 보내거나 받은 packet은 개별적으로 주소가 지정되고 라우팅됨
+* Datagram socket에서는 순서와 신뢰성이 보장되지 않으므로 한 기계 또는 프로세스에서 다른 기계로 전송되는 여러 packet이 임의의 순서로 도착하거나 전혀 도착하지 않을 수 있음
+
+{empty} + 
+
+=== Stream Sockets
+
+* Connection-oriented Sockets
+  * TCP(Transmission Control Protocol)
+  * SCTP(Stream Control Transmission Protocol) 
+  * DCCP(Datagram Congestion Control Protocol)
+
+* 오류 없는 데이터 전송, packet 순서, 흐름 제어 보장
+* 인터넷에서 일반적으로 TCP를 사용하여 구현되므로 응용 프로그램이 TCP/IP 프로토콜을 사용하여 네트워크를 통해 실행될 수 있음
+* 송신된 순서에 따라 중복되지 않게 데이터를 수신함으로 이에 따른 overhead 발생
+
+{empty} + 
+
+=== Raw Sockets
+
+* 프로토콜별 전송 계층 형식 없이 IP packet을 직접 보내고 받을 수 있음
+* 전송 계층 프로토콜(예: TCP, UDP)에 상관없이 IP packet으로 주고 받음
+* Berkeley socketsfootnote:[https://en.wikipedia.org/wiki/Berkeley_sockets[Berkeley sockets]]을 기반으로 하는 API는 raw sockets을 지원하며, 윈도우 XP는 2001년 윈삭 인터페이스에 구현된 raw sockets 지원을 통해 출시되었으나, 3년 후 마이크로소프트는 보안상의 문제로 row sockets 지원을 제한
+* Nmapfootnote:[https://en.wikipedia.org/wiki/Nmap[Nmap(Network Manager)]]과 같은 보안 관련 응용 프로그램에서 사용
+* 일반적으로 네트워크 장비에서 사용할 수 있으며 IGMPfootnote:[https://en.wikipedia.org/wiki/Internet_Group_Management_Protocol[IGMP(Internet Group Management Protocol)]]와 OSPFfootnote:[https://en.wikipedia.org/wiki/Open_Shortest_Path_First[OSPF(Open Shortest Path First)]]와 같은 라우팅 프로토콜에 사용
+* pingfootnote:[https://en.wikipedia.org/wiki/Ping_(networking_utility)[Ping(networking utility)]] 유틸리티에 의해 사용되는 인터넷 제어 메시지 프로토콜(ICMP)에도 사용

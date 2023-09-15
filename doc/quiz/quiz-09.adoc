@@ -1,0 +1,15 @@
+=== Quiz-09. 반복 연결이 가능한 Echo Server를 만들어 보자.
+
+{empty} +
+
+
+아래의 요구 사항에 맞는 server를 구현해 보자.
+
+* 실행시 서비스를 위한 port를 지정할 수 있다. 별도의 port 지정이 없는 경우, 1234를 기본으로 한다.
+
+* Server는 실행 후 대기 상태를 유지하고, client가 접속되면 client 정보를 출력한다.
+
+* Server에서는 연결된 socket이 끊어지기 전까지 client에서 보내온 데이터를 client로 다시 돌려 보낸다.
+
+* Client 연결이 끊어지면, server는 대기 상태로 다음 연결을 기다린다.
+

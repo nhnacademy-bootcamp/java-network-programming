@@ -1,0 +1,53 @@
+=== Exam-02. Client socket을 server에 연결하여 data를 보낸다
+
+{empty} +
+
+아래와 과정을 따라 server 연결 후 data 전송 방법을 알아 보자.
+
+1. 지정된 server에 연결하여 socket을 생성한다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam02.java[tags="newSocket",indent=0]
+----
++
+2. Server에 연결되면, socket을 반환하고 계속 진행한다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam02.java[tags="connected",indent=0]
+----
++
+3. 그렇지 않으면, IOException을 발생시킨다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam02.java[tags="connectException",indent=0]
+----
++
+4. 연결된 socket에서 output stream을 얻어서 데이터를 전송한다.
++
+--
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam02.java[tags="outputWrite",indent=0]
+----
+* OutputStream class의 write() 함수는 byte [] 를 받아 전송하므로, 문자열은 byte []로 변환한다.
+--
++
+5. 데이터 송/수신이 끝나면 연결을 끊고, socket을 닫는다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam02.java[tags="socketClose",indent=0]
+----
++
+
+
+
+==== Source Code
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam02.java[데이터 보내기]
+----
+

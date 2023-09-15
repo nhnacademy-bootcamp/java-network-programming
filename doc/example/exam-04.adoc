@@ -1,0 +1,57 @@
+=== Exam-04. ServerSocket을 생성하여 client와 연결해 보자.
+
+{empty} +
+
+아래의 과정을 따라 ServerSocket을 생성하여 client가 접속하여 통신하는 과정을 확인해 보자.
+
+1. 서비스를 위한 port를 지정해 ServerSocket object를 생성한다.
++
+--
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam04.java[lines=11,indent=0]
+...
+include::../../src/main/java/com/nhnacademy/example/Exam04.java[lines=18..21,indent=0]
+----
+* try-with-resources 
+footnote:[https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html[Oracle Tutorials : The try-with-resources Statement]] 
+footnote:[https://www.baeldung.com/java-try-with-resources[Baeldung : Java – Try with Resources]]
+를 이용해 serverSocket을 close 하지 않고 종료하는 것을 방지한다.
+--
++
+2. ss commmand를 이용해 지정된 port가 연결 대기 상태인지 확인한다.
++
+[source,console]
+----
+~$ ss -ltn
+State   Recv-Q   Send-Q     Local Address:Port     Peer Address:Port    Process
+LISTEN  0        4096       127.0.0.53%lo:53            0.0.0.0:*
+LISTEN  0        50                     *:1234                *:*
+----
++
+3. nc를 client로 사용해 연결한다.
++
+[source,console]
+----
+~$ nc localhost 1234
+----
++
+4. 정상적으로 연결될 경우, server에서는 "Hello!"를 전송하고
++
+--
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam04.java[tags="send",indent=0]
+----
+* OutputStream의 write는 int 또는 byte []만 받을 수 있다. 따라서, 문자열 전송을 위해서는 문자열을 byte []로의 변환이 필요하다.
+* 문자열은 별도의 변수를 이용하지 않더라도 String class에서 지원하는 함수를 사용할 수 있다. 
+--
++
+5. nc에서는 이를 받아서 출력하고 종료한다.
++
+[source,console]
+----
+~$ nc localhost 1234
+Hello!
+----
++

@@ -1,0 +1,83 @@
+== Exam-01. Client socket을 이용해 server에 연결해 보자.
+
+{empty} +
+
+=== 과정
+
+아래의 과정을 따라 client socket을 이용해 server에 연결되는 과정을 확인해 보자.
+
+1. 터미널을 실행시키고, ncfootnote:[https://en.wikipedia.org/wiki/Netcat[netcat]]를 이용해 서버를 생성한다.
++
+[source,console]
+----
+> nc -l 12345
+----
+2. Socket을 생성한다.
+* Server IP address는 localhost로 지정한다.
+* Server port는 nc에서 설정한 12345로 지정한다. 
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam01.java[tags=createSocket,indent=0]
+----
+3. 작성된 source code를 compile 한다.
++
+[source,console]
+----
+~$ javac Exam01.java
+----
++
+4. 정상적으로 연결될 경우, 아래와 같이 출력된다.
++
+[source,console]
+----
+~$ java Exam01
+서버에 연결되었습니다.
+----
++
+5. 여러가지 이유에 의해 연결되지 않을 경우, 아래와 같이 출력된다.
++
+--
+[soruce,console]
+----
+~$ java Exam01
+java.net.ConnectException: Connection refused (Connection refused)
+----
+연결 실패의 원인이 무엇일까?
+* Server에 port가 열려 있는지 ssfootnote:[https://www.linux.com/topic/networking/introduction-ss-command/[ss(socket statistics)]]확인한다.
+[source,console]
+----
+~$ ss -ltn
+State   Recv-Q  Send-Q    Local Address:Port       Peer Address:Port     Process
+LISTEN  0       4096      127.0.0.1:8088           0.0.0.0:*
+LISTEN  0       511       127.0.0.1:41659          0.0.0.0:*
+LISTEN  0       4096      127.0.0.53%lo:53         0.0.0.0:*
+LISTEN  0       50        [::ffff:127.0.0.1]:64120 *:*
+LISTEN  0       4096      *:8086                   *:*
+----
+ss명령을 이용해 Server에 port 12345가 열려 있지 않음을 확인할 수 있다.
+
+netcat을 실행한 후 확인해 보자.
+[source,console]
+----
+~$ ss -ltn
+State   Recv-Q  Send-Q   Local Address:Port       Peer Address:Port        Process        
+
+LISTEN  0       4096      127.0.0.1:8088           0.0.0.0:*
+LISTEN  0       1         0.0.0.0:12345            0.0.0.0:*
+LISTEN  0       511       127.0.0.1:41659          0.0.0.0:*
+LISTEN  0       4096      127.0.0.53%lo:53         0.0.0.0:*
+LISTEN  0       50        [::ffff:127.0.0.1]:64120 *:*     
+LISTEN  0       4096      *:8086                   *:*
+----
+Client 연결을 위한 port 12345가 열려 있음을 확인할 수 있고, 이후 다시 실행해 보자.
+
+결과는 아래와 같이 정상적으로 연결된다.
+[source,console]
+----
+~$ java Exam01
+서버에 연결되었습니다.
+----
+--
++
+

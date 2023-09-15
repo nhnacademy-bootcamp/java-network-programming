@@ -1,0 +1,10 @@
+== Linux Commands
+
+=== ss(Socket Statistics)
+
+* 리눅스에서 지원되는 시스템 명령어
+* 시스템에서 관리되고 있는 소켓 정보 표시
+* 예제에서 사용한 옵션
+** -l --listening - 연결 대기중인 소켓 정보만 출력
+** -t --tcp : tcp 소켓 정보 출력
+** -n --numeric : 소켓 정보를 서비스 이름(별도 파일 - /etc/services)이 아닌 숫자로 표시

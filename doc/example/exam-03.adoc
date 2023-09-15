@@ -1,0 +1,60 @@
+=== Exam-03. Client socket을 server에 연결하여 data를 받는다
+
+{empty} +
+
+아래와 과정을 따라 server 연결 후 data 수신 방법을 알아 보자.
+
+1. 지정된 server에 연결하여 socket을 생성한다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam03.java[lines=26,indent=0]
+----
++
+* 연결에 성공하면, 메시지가 출력된다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam03.java[lines=27,indent=0]
+----
++
+* 연결에 실패하면, IOException이 발생한다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam03.java[lines=35..37,indent=0]
+----
++
+2. 연결된 socket에서 데이터를 받기 위한 input stream을 얻는다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam03.java[lines=30,indent=0]
+----
+* 데이터를 묶어서 받기 위해 BufferedInputStream을 사용한다.
++
+3. 수신한 데이터 출력을 위해 시스템 표준 출력을 이용한다.
++
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam03.java[lines=31,indent=0]
+----
++
+4. 데이터 송/수신이 끝나면 연결을 끊고, socket을 닫는다.
++
+--
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam03.java[lines=34,indent=0]
+----
+--
++
+
+
+==== Source Code
+
+[source,java]
+----
+include::../../src/main/java/com/nhnacademy/example/Exam03.java[데이터 보내기]
+----
+

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Microsoft Visio, SVG Export에서 생성되었습니다. echo_server.svg 페이지-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="5.12144in" height="4.72774in"
+		viewBox="0 0 368.744 340.397" xml:space="preserve" color-interpolation-filters="sRGB" class="st10">
+	<v:documentProperties v:langID="1042" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#000000;font-family:맑은 고딕;font-size:0.833336em}
+		.st3 {font-size:1em}
+		.st4 {marker-end:url(#mrkr5-16);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st5 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.22935779816514}
+		.st6 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st7 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st8 {fill:#000000;font-family:맑은 고딕;font-size:1.00001em}
+		.st9 {marker-end:url(#mrkr5-83);stroke:#000000;stroke-dasharray:5.25,3.75;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st10 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend5">
+			<path d="M 2 1 L 0 0 L 1.98117 -0.993387 C 1.67173 -0.364515 1.67301 0.372641 1.98465 1.00043 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr5-16" class="st5" v:arrowType="5" v:arrowSize="2" v:setback="7.63" refX="-7.63" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend5" transform="scale(-4.36,-4.36) "/>
+		</marker>
+		<marker id="mrkr5-83" class="st5" v:arrowType="5" v:arrowSize="2" v:setback="7.15" refX="-7.15" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend5" transform="scale(-4.36,-4.36) "/>
+		</marker>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>페이지-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape29-1" v:mID="29" v:groupContext="shape" transform="translate(0.12,-0.12)">
+			<title>사각형.29</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<rect x="0" y="0.240009" width="368.504" height="340.157" class="st1"/>
+		</g>
+		<g id="shape1-3" v:mID="1" v:groupContext="shape" transform="translate(14.2932,-241.065)">
+			<title>사각형</title>
+			<desc>TCP Client</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6929" cy="297.878" width="113.39" height="85.0394"/>
+			<rect x="0" y="255.358" width="113.386" height="85.0394" class="st1"/>
+			<text x="48" y="294.88" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>TCP<v:newlineChar/><tspan
+						x="43.77" dy="1.2em" class="st3">Client</tspan></text>		</g>
+		<g id="shape2-7" v:mID="2" v:groupContext="shape" transform="translate(241.065,-241.065)">
+			<title>사각형.2</title>
+			<desc>Echo Server</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6929" cy="297.878" width="113.39" height="85.0394"/>
+			<rect x="0" y="255.358" width="113.386" height="85.0394" class="st1"/>
+			<text x="45.86" y="294.88" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>Echo<v:newlineChar/><tspan
+						x="42.65" dy="1.2em" class="st3">Server</tspan></text>		</g>
+		<g id="shape3-11" v:mID="3" v:groupContext="shape" transform="translate(127.679,-311.931)">
+			<title>시트.3</title>
+			<path d="M0 340.4 L107.66 340.4" class="st4"/>
+		</g>
+		<g id="shape4-17" v:mID="4" v:groupContext="shape" transform="translate(241.065,425.557) rotate(180)">
+			<title>시트.4</title>
+			<path d="M0 340.4 L107.66 340.4" class="st4"/>
+		</g>
+		<g id="shape5-22" v:mID="5" v:groupContext="shape" transform="translate(14.2932,-212.718)">
+			<title>시트.5</title>
+			<path d="M0 340.4 L113.39 340.4" class="st6"/>
+		</g>
+		<g id="shape6-25" v:mID="6" v:groupContext="shape" transform="translate(241.065,-212.718)">
+			<title>시트.6</title>
+			<path d="M0 340.4 L113.39 340.4" class="st6"/>
+		</g>
+		<g id="shape7-28" v:mID="7" v:groupContext="shape" transform="translate(411.384,127.679) rotate(90)">
+			<title>시트.7</title>
+			<path d="M0 340.4 L198.43 340.4" class="st6"/>
+		</g>
+		<g id="shape8-31" v:mID="8" v:groupContext="shape" transform="translate(638.155,127.679) rotate(90)">
+			<title>시트.8</title>
+			<path d="M0 340.4 L198.43 340.4" class="st6"/>
+		</g>
+		<g id="shape9-34" v:mID="9" v:groupContext="shape" transform="translate(99.3326,-184.372)">
+			<title>시트.9</title>
+			<path d="M0 340.4 L164.36 340.4" class="st4"/>
+		</g>
+		<g id="shape12-39" v:mID="12" v:groupContext="shape" transform="translate(269.411,524.769) rotate(180)">
+			<title>시트.12</title>
+			<path d="M0 340.4 L164.36 340.4" class="st4"/>
+		</g>
+		<g id="shape13-44" v:mID="13" v:groupContext="shape" transform="translate(99.3326,-113.506)">
+			<title>시트.13</title>
+			<path d="M0 340.4 L164.36 340.4" class="st4"/>
+		</g>
+		<g id="shape14-49" v:mID="14" v:groupContext="shape" transform="translate(269.411,595.636) rotate(180)">
+			<title>시트.14</title>
+			<path d="M0 340.4 L164.36 340.4" class="st4"/>
+		</g>
+		<g id="shape15-54" v:mID="15" v:groupContext="shape" transform="translate(127.679,-311.931)">
+			<title>시트.15</title>
+			<desc>write</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="333.311" width="42.52" height="14.1732"/>
+			<rect x="0" y="326.224" width="42.5197" height="14.1732" class="st7"/>
+			<text x="7.96" y="336.91" class="st8" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>write</text>		</g>
+		<g id="shape16-57" v:mID="16" v:groupContext="shape" transform="translate(198.545,-311.931)">
+			<title>시트.16</title>
+			<desc>read</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="333.311" width="42.52" height="14.1732"/>
+			<rect x="0" y="326.224" width="42.5197" height="14.1732" class="st7"/>
+			<text x="9.2" y="336.91" class="st8" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>read</text>		</g>
+		<g id="shape19-60" v:mID="19" v:groupContext="shape" transform="translate(198.545,-255.238)">
+			<title>시트.19</title>
+			<desc>write</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="333.311" width="42.52" height="14.1732"/>
+			<rect x="0" y="326.224" width="42.5197" height="14.1732" class="st7"/>
+			<text x="7.96" y="336.91" class="st8" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>write</text>		</g>
+		<g id="shape20-63" v:mID="20" v:groupContext="shape" transform="translate(127.679,-255.238)">
+			<title>시트.20</title>
+			<desc>read</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="333.311" width="42.52" height="14.1732"/>
+			<rect x="0" y="326.224" width="42.5197" height="14.1732" class="st7"/>
+			<text x="9.2" y="336.91" class="st8" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>read</text>		</g>
+		<g id="shape21-66" v:mID="21" v:groupContext="shape" transform="translate(170.199,-184.372)">
+			<title>시트.21</title>
+			<desc>Hello</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="333.311" width="42.52" height="14.1732"/>
+			<rect x="0" y="326.224" width="42.5197" height="14.1732" class="st7"/>
+			<text x="7.15" y="336.91" class="st8" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>Hello</text>		</g>
+		<g id="shape22-69" v:mID="22" v:groupContext="shape" transform="translate(170.199,-156.026)">
+			<title>시트.22</title>
+			<desc>Hello</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="333.311" width="42.52" height="14.1732"/>
+			<rect x="0" y="326.224" width="42.5197" height="14.1732" class="st7"/>
+			<text x="7.15" y="336.91" class="st8" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>Hello</text>		</g>
+		<g id="shape23-72" v:mID="23" v:groupContext="shape" transform="translate(170.199,-113.506)">
+			<title>시트.23</title>
+			<desc>Hello</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="333.311" width="42.52" height="14.1732"/>
+			<rect x="0" y="326.224" width="42.5197" height="14.1732" class="st7"/>
+			<text x="7.15" y="336.91" class="st8" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>Hello</text>		</g>
+		<g id="shape24-75" v:mID="24" v:groupContext="shape" transform="translate(170.199,-85.1594)">
+			<title>시트.24</title>
+			<desc>Hello</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.2598" cy="333.311" width="42.52" height="14.1732"/>
+			<rect x="0" y="326.224" width="42.5197" height="14.1732" class="st7"/>
+			<text x="7.15" y="336.91" class="st8" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>Hello</text>		</g>
+		<g id="shape27-78" v:mID="27" v:groupContext="shape" transform="translate(297.758,-156.026)">
+			<title>시트.27</title>
+			<path d="M0 312.05 A14.1732 14.1732 0 0 1 14.17 326.22 A14.1732 14.1732 0 0 1 5.6 339.24 L5.25 339.31" class="st9"/>
+		</g>
+		<g id="shape28-84" v:mID="28" v:groupContext="shape" transform="translate(297.758,-85.1594)">
+			<title>시트.28</title>
+			<path d="M0 312.05 A14.1732 14.1732 0 0 1 14.17 326.22 A14.1732 14.1732 0 0 1 5.6 339.24 L5.25 339.31" class="st9"/>
+		</g>
+	</g>
+</svg>
