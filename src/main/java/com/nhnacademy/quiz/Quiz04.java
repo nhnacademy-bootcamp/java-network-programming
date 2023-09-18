@@ -1,8 +1,10 @@
 package com.nhnacademy.quiz;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.IOException;
+import java.net.ConnectException;
 import java.net.Socket;
 
 public class Quiz04 {
@@ -23,46 +25,42 @@ public class Quiz04 {
             System.exit(1);
         }
 
+        // tag::getSocketInfo[]
         try {
-
-            // tag::newSocket[]
+            // tag::createSocket[]
             Socket socket = new Socket(host, port);
-            // end::newSocket[]
-            // tag::connected[]
             System.out.println("서버에 연결되었습니다.");
-            // end::connected[]
-            // tag::getInputStream[]
-            BufferedInputStream input = new BufferedInputStream(socket.getInputStream());
-            // end::getInputStream[]
+            // end::createSocket[]
+
             // tag::getOutputStream[]
-            BufferedOutputStream output = new BufferedOutputStream(socket.getOutputStream());
+            OutputStream output = socket.getOutputStream(); // socke에서 Output stream 얻기
             // end::getOutputStream[]
-            int readLength;
-            // tag::createBuffer[]
-            byte[] buffer = new byte[2048];
-            // end::createBuffer[]
-
-            // tag::inputRead[]
-            while ((readLength = input.read(buffer)) > 0) {
-                // end::inputRead[]
-
-                // tag::exit[]
-                if (new String(buffer, 0, readLength).trim().equals("exit")) {
+            // tag::getStandardInput[]
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            // end::getStandardInput[]
+            while (true) {
+                // tag::readLine[]
+                String line = reader.readLine();
+                if (line.equals("exit")) {
                     break;
                 }
-                // end::exit[]
+                // end::readLine[]
 
                 // tag::outputWrite[]
-                output.write(buffer, 0, readLength);
+                output.write(line.getBytes()); // console에서 입력받은 문자열을 전송
+                output.write("\n".getBytes()); // 문자열 끝을 위한 newline 전송
+                output.flush(); // buffer에 남아 있는 데이터까지 완전히 전송
                 // end::outputWrite[]
             }
-            // tag::socketClose[]
+
+            // tag::closeSocket[]
             socket.close();
-            // end::socketClose[]
-            // tag::IOException[]
+            // end::closeSocket[]
+        } catch (ConnectException e) {
+            System.err.println(host + ":" + port + "에 연결할 수 없습니다.");
         } catch (IOException e) {
             System.err.println(e);
         }
-        // end::IOException[]
+        // end::getSocketInfo[]
     }
 }

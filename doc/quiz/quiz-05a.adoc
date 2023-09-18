@@ -2,34 +2,36 @@
 
 {empty} + 
 
+=== 과정
+
 아래와 과정을 따라 server 연결 후 data 수신 방법을 알아 보자.
 
 1. 지정된 server에 연결하여 socket을 생성한다.
 +
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="newSocket",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="newSocket",indent=0]
 ----
 +
 * 연결에 성공하면, 메시지가 출력된다.
 +
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="connected",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="connected",indent=0]
 ----
 +
 * 연결에 실패하면, IOException이 발생한다.
 +
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="IOException",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="IOException",indent=0]
 ----
 +
 2. 연결된 socket에서 데이터를 받기 위한 input stream을 얻는다.
 +
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="getInputStream",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="getInputStream",indent=0]
 ----
 * 데이터를 묶어서 받기 위해 BufferedInputStream을 사용한다.
 +
@@ -38,7 +40,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="getInputStrea
 --
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="getOutputStream",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="getOutputStream",indent=0]
 ----
 * BufferedOutputStream class는 ounput staream을 통해 데이터가 한꺼번에 처리하도록 한다.
 --
@@ -48,7 +50,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="getOutputStre
 --
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="inputRead",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="inputRead",indent=0]
 ----
 * input.read() 함수는 수신된 데이터를 buffer에 담고, 데이터 길이를 반환한다.
 --
@@ -58,7 +60,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="inputRead",in
 --
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="exit",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="exit",indent=0]
 ----
 * trim() 함수는 String의 양 끝에 공백이 있을 경우, 이를 제거한다.
 * 보내온 데이터에는 line feed, carriage return 등이 포함되어 있을 수 있다.
@@ -68,7 +70,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="exit",indent=
 +
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="outputWrite",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="outputWrite",indent=0]
 ----
 * 수신된 데이터 만큼만 출력한다.
 +
@@ -77,7 +79,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="outputWrite",
 --
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="socketClose",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="socketClose",indent=0]
 ----
 --
 +
@@ -88,6 +90,6 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="socketClose",
 
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[데이터 보내기]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[데이터 보내기]
 ----
 

@@ -1,4 +1,8 @@
-=== Quiz-XX. snc(simple-nc) 만들기
+== Quiz-XX. snc(simple-nc) 만들기
+
+{empty} + 
+
+=== 요구 사항
 
 nc(netcat)과 유사하게 동작하는 simple-nc를 만들어 본다.
 

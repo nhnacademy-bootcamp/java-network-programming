@@ -8,14 +8,14 @@
 +
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="createSocket",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="createSocket",indent=0]
 ----
 +
 2. 연결된 socket에서 데이터 입출력을 위한 stream을 얻는다.
 +
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="getOutputStream",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="getOutputStream",indent=0]
 ----
 +
 3. 전송할 데이터는 시스템 표준 입력을 이용한다.
@@ -23,7 +23,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="getOutputStre
 --
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="getStandardInput",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="getStandardInput",indent=0]
 ----
 * BufferedReader class는 input staream에서 들어오는 데이터를 모아서 한꺼번에 처리할 수 있도록 지원한다.
 --
@@ -33,7 +33,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="getStandardIn
 --
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="readLine",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="readLine",indent=0]
 ----
 * readLine() 함수는 줄단위로 입력을 받아 처리한다.
 * 줄은 line feed('\n'), carriage return('\r') 또는 line feed 바로 뒤에 오는 carriage return 중 하나로 종료되는 것으로 간주된다.
@@ -43,7 +43,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="readLine",ind
 +
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="outputWrite",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="outputWrite",indent=0]
 ----
 +
 6. 데이터 송/수신이 끝나면 연결을 끊고, socket을 닫는다.
@@ -51,7 +51,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="outputWrite",
 --
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="closeSocket",indent=0]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="closeSocket",indent=0]
 ----
 ** reader.readLine에서 ctrl+c를 이용해 입력을 끊으면, IOException 발생과 함께 while문을 벗어난다.
 ** 여기서 IOException 발생시 socket을 close하지 않은 상태에서 끝남으로 문제가 될 수 있다.
@@ -63,6 +63,6 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[tags="closeSocket",
 ==== Source Code
 [source,java]
 ----
-include::../../src/main/java/com/nhnacademy/quiz/Quiz03.java[데이터 보내기]
+include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[데이터 보내기]
 ----
 

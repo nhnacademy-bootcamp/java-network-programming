@@ -2,6 +2,8 @@
 
 {empty} +
 
+=== 요구 사항
+
 * Echo server는 과정 시작 전에 설치해 둔 node-red를 이용해서 구성한다.
 
 image::../image/node-red_echo_server.png[align="center"]
@@ -11,7 +13,7 @@ image::../image/node-red_echo_server.png[align="center"]
 
 {empty} +
 
-==== 참고
+=== 참고
 
 * 주어진 포트가 열려 서비스가 정상적으로 수행되고 있는지 ss 명령을 이용해 확인 가능하다.
 

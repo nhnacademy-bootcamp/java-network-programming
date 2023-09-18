@@ -16,9 +16,9 @@
 
 * 프로그램은 ip address와 port를 옵션으로 받을 수 있다.
 
-** java Quiz03 
-** java Quiz03 localhost
-** java Quiz03 localhost 1234
+** java Quiz04 
+** java Quiz04 localhost
+** java Quiz04 localhost 1234
 
 * 기본 ip address는 localhost로 하고, 기본 port는 1234로 한다.
 

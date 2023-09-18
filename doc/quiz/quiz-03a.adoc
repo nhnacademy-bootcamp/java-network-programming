@@ -1,0 +1,44 @@
+:sourcedir: ../../src/main/java/com/nhnacademy/quiz
+
+== Quiz-03. Socket class의 함수를 이용해 client와 server 접속 정보(host, port)를 확인하자
+
+{empty} +
+
+아래와 과정을 따라 server 연결 후 접속 정보를 확인해 보자.
+
+1. Command line argument가 주어진 경우, 해당 정보로 대체한다.
++
+[source,java]
+----
+include::{sourcedir}/Quiz03.java[lines=12..23,indent=0]
+----
+** args가 1개 이상이면 host 정보가 있는 것으로 처리
+** args가 2개 이상이면, port 변경으로 처리한다. port는 정수 이므로 parseInt()를 이용해 int로 변환한다.
+1. 지정된 server에 연결하여 socket을 생성한다.
++
+[source,java]
+----
+include::{sourcedir}/Quiz03.java[lines=27..28,indent=0]
+----
+2. Socket에서 지원하는 method를 이용해 정보를 출력한다.
++
+[source,java]
+----
+include::{sourcedir}/Quiz03.java[lines=30..33,indent=0]
+----
++
+** getLocalAddress(): 프로그램을 실행한 host의 IP 주소
+** getLocalPort(): 프로그램에서 server 접속을 위해 사용한 port 번호
+** getInetAddress(): Server IP 주소
+** getPort(): Server의 서비스 port 번호
+3. 출력된 결과를 확인한다.
++
+[source,console]
+----
+~$ java com.nhnacademy.quiz.Quiz03 ems.nhnacademy.com 12345
+서버에 연결되었습니다.
+Local address : 192.168.70.28
+Local port : 55829
+Remote address : 103.218.159.165
+Remote port : 12345
+----
