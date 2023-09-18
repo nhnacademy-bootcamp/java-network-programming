@@ -1,30 +1,9 @@
-=== Quiz-07. Server socket에서 client 접속 후 생성된 socket을 이용해 client  정보(host, port)를 확인하자
+== Quiz-07. 프로그램에서 보내고 받는 과정에 별도로 동작하도록 구성하라.
 
 {empty} +
 
+* Quiz-05에서는 입력된 문자열을 전송하고, 이롤 돌려 받은  후 다음 문자열을 보낼 수 있다.
 
-Socket class에서는 현재 연결되어 있는 host 정보 뿐만 아니라 자신의 정보도 포함되어 있다.
+* 본 프로그램에서는 보낸 과정과 받는 과정을 분리하여 개별 동작이 가능하도록 수정한다.
 
-앞에서의 socket 생성 예제를 보면 상대의 정보(host의 domain name 또는 IP address와 port)는 instance 생성 시점에 주어짐으로 알 수 있다. 하지만, 자신이 실행되고 있는 localhost에 관해서는 아무런 정보를 알지 못한다.
-
-Socket classfootnote:[https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html[Class Socket]]에서는 이러한 정보를 얻을 수 있다.
-
-Socket class에서 지원하는 기능을 이용해 client 정보를 출력해 보자.
-
-* Port를 arguments 주어질 수 있다.
-
-{empty} +
-
-출력 결과는 아래와 같다.
-
-* 정상 연결시 client 정보가 출력됩니다.
-+
-[source,console]
-----
-~$ java Quiz07
-Client[127.0.0.1:38832]가 연결되었습니다.
-
-~$ java Quiz07 1235
-Client[127.0.0.1:12612]가 연결되었습니다.
-----
-+
+* 두 동작의 개별 동작은 thread를 이용해 구현 가능하다.

@@ -1,4 +1,4 @@
-=== Quiz-09. 반복 연결이 가능한 Echo Server를 만들어 보자.
+== Quiz-09. Echo Server를 만들어 보자.
 
 {empty} +
 
@@ -11,5 +11,4 @@
 
 * Server에서는 연결된 socket이 끊어지기 전까지 client에서 보내온 데이터를 client로 다시 돌려 보낸다.
 
-* Client 연결이 끊어지면, server는 대기 상태로 다음 연결을 기다린다.
-
+* Client 연결이 끊어지면, server socket을 닫고 프로그램을 종료한다.

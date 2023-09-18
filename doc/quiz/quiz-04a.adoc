@@ -1,4 +1,4 @@
-=== Quiz-03. Client socket을 server에 연결하여 data를 보내고, exit가 입력되면 프로그램을 종료한다.
+== Quiz-04A. Client socket을 server에 연결하여 data를 보내고, exit가 입력되면 프로그램을 종료한다.
 
 {empty} + 
 

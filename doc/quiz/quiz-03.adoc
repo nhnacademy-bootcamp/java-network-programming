@@ -1,30 +1,61 @@
-=== Quiz-03. Client socket을 server에 연결하여 data를 보내고, exit가 입력되면 프로그램을 종료하라.
+== Quiz-03. Socket class의 함수를 이용해 client와 server 접속 정보(host, port)를 확인하자
 
-{empty} + 
+{empty} +
 
-앞 예제를 통해서 간단하게 data 전송 방법에 대해 배웠다.
+Socket class에서는 현재 연결되어 있는 host 정보 뿐만 아니라 자신의 정보도 포함되어 있다.
 
-다음 조건을 만족하도록 프로그램을 구성해 보자.
+앞에서의 socket 생성 예제를 보면 상대의 정보(host의 domain name 또는 IP address와 port)는 instance 생성 시점에 주어짐으로 알 수 있다. 하지만, 자신이 실행되고 있는 localhost에 관해서는 아무런 정보를 알지 못한다.
 
-* Server에 접속한다.
+Socket classfootnote:[https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html[Class Socket]]에서는 이러한 정보를 얻을 수 있다.
 
-* 라인 단위로 문자열을 입력 받는다.
+Socket class에서 지원하는 기능을 이용해 로컬 호스트와 원격 호스트에 정보를 출력해 보자.
 
-* 입력된 문자열이 "exit"인 경우, 프로그램을 종료한다.
+* Command line arguments로 host 정보(domain name 또는 IP 주소)를 받을 수 있다.
+* Command line arguments로 host 정보(domain name 또는 IP 주소)와 port를 받을 수 있다.
+* Command line arguments로 아무 것도 주어지지 않을 경우, 기본값으로 localhost와 port 1234가 적용되도록 한다.
 
-* 입력된 문자열이 "exit"이 아닌 경우, server로 전송한다. 
+{empty} +
 
-* 프로그램은 ip address와 port를 옵션으로 받을 수 있다.
 
-** java Quiz03 
-** java Quiz03 localhost
-** java Quiz03 localhost 1234
+출력 결과는 아래와 같다.
 
-* 기본 ip address는 localhost로 하고, 기본 port는 1234로 한다.
-
-* 테스트를 위한 server는 아래와 같이 실행한다.
-
+* 정상 연결시 정보 출력
++
 [source,console]
 ----
-~$ nc -l 1234
+~$ java Quiz03 localhost 8086
+서버에 연결되었습니다.
+Local address : 127.0.0.1
+Local port : 38832
+Remote address : 127.0.0.1
+Remote port : 8086
+----
++
+* Host나 port 정보가 잘못된 경우
++
+[source,console]
+----
+~$ java Quiz03 192.168.100.100 
+192.168.100.100:1234에 연결할 수 없습니다.
+----
++
+* host와 port 정보가 주어지지 않을 경우
++
+[source,console]
+----
+~$ java Quiz03 
+localhost:1234에 연결할 수 없습니다.
+----
+
+{empty} +
+
+결과 확인은 아래와 같이 ssfootnote:[xref:../Ref.Linux_Commands.adoc[Socket Statistics]] 명령을 이용해 확인 가능하다.
+[source, console]
+----
+~$ ss -tn
+State    Recv-Q  Send-Q Local Address:Port  Peer Address:Port  Process             
+ESTAB    0       0      127.0.0.1:46802     127.0.0.1:41659
+ESTAB    0       24     127.0.0.1:41659     127.0.0.1:46802
+ESTAB    0       0      127.0.0.1:41659     127.0.0.1:46808
+ESTAB    0       0      127.0.0.1:46808     127.0.0.1:41659
 ----

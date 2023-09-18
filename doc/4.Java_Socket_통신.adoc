@@ -35,7 +35,7 @@ link:quiz/quiz-01.adoc[Quiz-01. Server에 연결 가능한 port가 무엇이 있
 
 Socket은 유한한 자원 중 하나로 생성 가능한 수가 제한되어 있고, 필요시 조정 가능하다.
 
-link:quiz/quit-01-01.adoc[Quiz-01-01. try-with-resources를 이용해 socket 자원을 관리하라.]
+link:quiz/quiz-02.adoc[Quiz-02. try-with-resources를 이용해 socket 자원을 관리하라.]
 
 {empty} +
 
@@ -44,7 +44,7 @@ link:quiz/quit-01-01.adoc[Quiz-01-01. try-with-resources를 이용해 socket 자
 Socket은 대상 host와의 통신을 위한 통로 역할을 한다. 따라서, socket에는 대상 host에 대한 정보가 포함되어 있으므, Socket class에서 지원하는 함수를 이용해 해당 정보 확인이 가능하다.
 
 
-link:quiz/quiz-02.adoc[Quiz-02. Socket class의 함수를 이용해 client와 server 접속 정보(host, port)를 확인하자.]
+link:quiz/quiz-03.adoc[Quiz-03. Socket class의 함수를 이용해 client와 server 접속 정보(host, port)를 확인하자.]
 
 {empty} +
 
@@ -55,7 +55,7 @@ link:quiz/quiz-02.adoc[Quiz-02. Socket class의 함수를 이용해 client와 se
 
 link:example/exam-02.adoc[Exam-02. Client socket을 server에 연결하여 data를 보내자.]
 
-link:quiz/quiz-03.adoc[Quiz-03. Client socket을 server에 연결하여 data를 보내고, exit가 입력되면 프로그램을 종료한다.]
+link:quiz/quiz-04.adoc[Quiz-04. Client socket을 server에 연결하여 data를 보내고, exit가 입력되면 프로그램을 종료한다.]
 
 {empty} +
 
@@ -65,7 +65,7 @@ link:quiz/quiz-03.adoc[Quiz-03. Client socket을 server에 연결하여 data를 
 
 link:example/exam-03.adoc[Exam-03. Client socket을 server에 연결하여 data를 받아 보자.]
 
-link:quiz/quiz-04.adoc[Quiz-04. Client socket을 server에 연결하여 server에서 보내오는 문자열을 출력하라.]
+link:quiz/quiz-05.adoc[Quiz-05. Client socket을 server에 연결하여 server에서 보내오는 문자열을 출력하라.]
 
 {empty} +
 
@@ -76,7 +76,7 @@ Echo server는 아래 그림과 같이 client가 server에 연결하여 message�
 image::image/echo_server.svg[align="center"]
 
 
-link:quiz/quiz-05.adoc[Quiz-05. Echo server에 연결하여 문자열을 보내고 받도록 구성하라.]
+link:quiz/quiz-06.adoc[Quiz-06. Echo server에 연결하여 문자열을 보내고 받도록 구성하라.]
 
 {empty} +
 
@@ -90,7 +90,7 @@ Echo server의 경우, 보낸 데이터를 그대로 돌려줌으로써 socket�
 
 image::image/async_echo_server.svg[align="center"]
 
-link:quiz/quiz-06.adoc[Quiz-06. 프로그램에서 보내고 받는 과정에 별도로 동작하도록 구성하라.]
+link:quiz/quiz-07.adoc[Quiz-07. 프로그램에서 보내고 받는 과정에 별도로 동작하도록 구성하라.]
 
 {empty} +
 
@@ -116,7 +116,7 @@ access() 함수를 통해 받은 socket은 client에서의 socket이 연결되�
 앞서 설명한 client socket에서 host, port 등의 정보를 확인하였다.
 Server socket을 통해 client 접속 후 생성되는 socket을 통해서도 동일하게 확인할 수 있다.
 
-link:quiz/quiz-07.adoc[Quiz-07. Server socket에서 client 접속 후 생성된 socket을 이용해 client  정보(host, port)를 확인하자]
+link:quiz/quiz-08.adoc[Quiz-08. Server socket에서 client 접속 후 생성된 socket을 이용해 client  정보(host, port)를 확인하자]
 
 {empty} + 
 
@@ -125,9 +125,9 @@ link:quiz/quiz-07.adoc[Quiz-07. Server socket에서 client 접속 후 생성된 
 Client socket에서 Node-RED를 이용해 echo server를 구성하였다. 
 이를 server socket을 이용해 구성해 보도록 하자.
 
-link:quiz/quiz-08.adoc[Quiz-08. Echo Server 만들어 보자]
+link:quiz/quiz-09.adoc[Quiz-09. Echo Server 만들어 보자]
 
-link:quiz/quiz-09.adoc[Quiz-09. 반복 연결이 가능한 Echo Server 만들어 보자]
+link:quiz/quiz-10.adoc[Quiz-10. 반복 연결이 가능한 Echo Server 만들어 보자]
 
 {empty} +
 
@@ -141,7 +141,7 @@ Server socket은 port를 통해 대기 상태에서 client가 연결되면 통�
 
 Server socket은 대기 상태에서 client 연결이 이루어지면 이를 처리하기 위한 thread를 생성하여 생성된 socket을 넘겨주고 server socket은 다시 새로운 연결을 기다리도록 한다.
 
-link:quiz/quiz-10.adoc[Quiz-10. 하나 이상의 client가 동시 연결될 수 있도록 echo server를 구성해 보자]
+link:quiz/quiz-11.adoc[Quiz-11. 하나 이상의 client가 동시 연결될 수 있도록 echo server를 구성해 보자]
 
 {empty} +
 
@@ -153,7 +153,7 @@ image::image/multi_chat_server.png[align="center"]
 
 앞에서 하나 이상의 client가 접속할 수 있는 server를 구성해 보았다. 이를 이용해 server에 접속해 있는 모든 client에 메시지를 전달하는 server 구성이 가능하다.
 
-link:quiz/quiz-11.adoc[Quiz-11. Client에서 보내온 메시지를 접속한 모든 client에 전송하는 broadcasting server를 만들어 보자.]
+link:quiz/quiz-12.adoc[Quiz-12. Client에서 보내온 메시지를 접속한 모든 client에 전송하는 broadcasting server를 만들어 보자.]
 
-link:quiz/quiz-12.adoc[Quiz-12. Client에서 보내온 메시지를 접속한 모든 client 또는 특정 client에 전송할 수 있도록 multi-chatting client/server를 만들어 보자.]
+link:quiz/quiz-13.adoc[Quiz-13. Client에서 보내온 메시지를 접속한 모든 client 또는 특정 client에 전송할 수 있도록 multi-chatting client/server를 만들어 보자.]
 

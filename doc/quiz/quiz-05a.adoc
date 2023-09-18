@@ -1,4 +1,4 @@
-=== Quiz-04-A. Client socket을 server에 연결하여 문자열 data를 받아 출력하고, 문자열 데이터가 exit이면 종료한다.
+== Quiz-05-A. Client socket을 server에 연결하여 문자열 data를 받아 출력하고, 문자열 데이터가 exit이면 종료한다.
 
 {empty} + 
 

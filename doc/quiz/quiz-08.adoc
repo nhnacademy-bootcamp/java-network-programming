@@ -1,14 +1,30 @@
-=== Quiz-08. Echo Server를 만들어 보자.
+== Quiz-08. Server socket에서 client 접속 후 생성된 socket을 이용해 client  정보(host, port)를 확인하자
 
 {empty} +
 
 
-아래의 요구 사항에 맞는 server를 구현해 보자.
+Socket class에서는 현재 연결되어 있는 host 정보 뿐만 아니라 자신의 정보도 포함되어 있다.
 
-* 실행시 서비스를 위한 port를 지정할 수 있다. 별도의 port 지정이 없는 경우, 1234를 기본으로 한다.
+앞에서의 socket 생성 예제를 보면 상대의 정보(host의 domain name 또는 IP address와 port)는 instance 생성 시점에 주어짐으로 알 수 있다. 하지만, 자신이 실행되고 있는 localhost에 관해서는 아무런 정보를 알지 못한다.
 
-* Server는 실행 후 대기 상태를 유지하고, client가 접속되면 client 정보를 출력한다.
+Socket classfootnote:[https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html[Class Socket]]에서는 이러한 정보를 얻을 수 있다.
 
-* Server에서는 연결된 socket이 끊어지기 전까지 client에서 보내온 데이터를 client로 다시 돌려 보낸다.
+Socket class에서 지원하는 기능을 이용해 client 정보를 출력해 보자.
 
-* Client 연결이 끊어지면, server socket을 닫고 프로그램을 종료한다.
+* Port를 arguments 주어질 수 있다.
+
+{empty} +
+
+출력 결과는 아래와 같다.
+
+* 정상 연결시 client 정보가 출력됩니다.
++
+[source,console]
+----
+~$ java Quiz07
+Client[127.0.0.1:38832]가 연결되었습니다.
+
+~$ java Quiz07 1235
+Client[127.0.0.1:12612]가 연결되었습니다.
+----
++

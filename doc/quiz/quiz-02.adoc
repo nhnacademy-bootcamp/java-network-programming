@@ -1,61 +1,14 @@
-=== Quiz-02. Socket class의 함수를 이용해 client와 server 접속 정보(host, port)를 확인하자
+== Quiz-02. try-with-resources를 이용해 socket 자원을 관리하라.
 
-{empty} +
+프로그램에서 socket, file등 유한한 시스템 자원을 사용할 경우, 필요 없는 시점에 이를 해제 시켜줘야 한다.
 
-Socket class에서는 현재 연결되어 있는 host 정보 뿐만 아니라 자신의 정보도 포함되어 있다.
+Java에서는 GC(Garbage Collection)이 지원되어 별도의 해제가 없더라도 반환이 되기는 하지만, 그 시점이 언제될지 알 수가 없다.
+따라서, 자원의 활용은 최소한의 시간동안만 이용할 수 있도록 처리하는 것이 좋다.
 
-앞에서의 socket 생성 예제를 보면 상대의 정보(host의 domain name 또는 IP address와 port)는 instance 생성 시점에 주어짐으로 알 수 있다. 하지만, 자신이 실행되고 있는 localhost에 관해서는 아무런 정보를 알지 못한다.
+이를 위해 Java에서는 자원 관리의 효율적으로 하기 위해 try-with-resourcesfootnote:[https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html[Oracle: The try-with-resources Statement]]footnote:[https://www.baeldung.com/java-try-with-resources[Baeldung: Java - Try with Resources]]를 지원한다.
 
-Socket classfootnote:[https://docs.oracle.com/javase/8/docs/api/java/net/Socket.html[Class Socket]]에서는 이러한 정보를 얻을 수 있다.
-
-Socket class에서 지원하는 기능을 이용해 로컬 호스트와 원격 호스트에 정보를 출력해 보자.
-
-* Command line arguments로 host 정보(domain name 또는 IP 주소)를 받을 수 있다.
-* Command line arguments로 host 정보(domain name 또는 IP 주소)와 port를 받을 수 있다.
-* Command line arguments로 아무 것도 주어지지 않을 경우, 기본값으로 localhost와 port 1234가 적용되도록 한다.
-
-{empty} +
+* Quiz-01을 try-with-resources를 이용하도록 수정하라.
+* try-with-resources를 이용할 경우, 어떠한 장점과 어떠한 단점이 있는지 생각해 보자.
 
 
-출력 결과는 아래와 같다.
 
-* 정상 연결시 정보 출력
-+
-[source,console]
-----
-~$ java Quiz02 localhost 8086
-서버에 연결되었습니다.
-Local address : 127.0.0.1
-Local port : 38832
-Remote address : 127.0.0.1
-Remote port : 8086
-----
-+
-* Host나 port 정보가 잘못된 경우
-+
-[source,console]
-----
-~$ java Quiz02 192.168.100.100 
-192.168.100.100:1234에 연결할 수 없습니다.
-----
-+
-* host와 port 정보가 주어지지 않을 경우
-+
-[source,console]
-----
-~$ java Quiz02 
-localhost:1234에 연결할 수 없습니다.
-----
-
-{empty} +
-
-결과 확인은 아래와 같이 ssfootnote:[xref:../Ref.LinuxCommands.adoc[Socket Statistics]] 명령을 이용해 확인 가능하다.
-[source, console]
-----
-~$ ss -tn
-State    Recv-Q  Send-Q Local Address:Port  Peer Address:Port  Process             
-ESTAB    0       0      127.0.0.1:46802     127.0.0.1:41659
-ESTAB    0       24     127.0.0.1:41659     127.0.0.1:46802
-ESTAB    0       0      127.0.0.1:41659     127.0.0.1:46808
-ESTAB    0       0      127.0.0.1:46808     127.0.0.1:41659
-----
