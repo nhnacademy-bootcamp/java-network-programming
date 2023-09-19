@@ -26,25 +26,25 @@ public class Quiz06 {
         }
 
         try (Socket socket = new Socket(host, port);
+                BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                BufferedWriter socketOut = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
                 BufferedReader terminalIn = new BufferedReader(new InputStreamReader(System.in));
-                BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                BufferedWriter output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))) {
-            char[] buffer = new char[2048];
+                BufferedWriter terminalOut = new BufferedWriter(new OutputStreamWriter(System.out))) {
+
             System.out.println("서버에 연결되었습니다.");
 
             String line;
-            while ((line = terminalIn.readLine()) != null) {
-                if (line.trim().equals("exit")) {
-                    break;
-                }
-                output.write(line);
-                output.flush();
-                int length = input.read(buffer);
-                System.out.println(new String(buffer, 0, length));
-            }
 
-        } catch (IOException e) {
-            System.err.println(e);
+            while ((line = terminalIn.readLine()) != null) {
+                socketOut.write(line + "\n");
+                socketOut.flush();
+
+                line = socketIn.readLine();
+                terminalOut.write(line + "\n");
+                terminalOut.flush();
+            }
+        } catch (IOException ignore) {
+            System.out.println("연결에 실패 하였습니다.");
         }
     }
 }

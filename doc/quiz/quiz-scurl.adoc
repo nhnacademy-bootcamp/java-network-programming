@@ -1,24 +1,23 @@
-=== Quiz-scurl. scurl(simple-curl) 만들기
+== Quiz-scurl. scurl(simple-curl) 만들기
 
 curlfootnote:[https://curl.se/[curl - transfer a URL]] 프로그램이 있다. 이 프로그램과 유사하게 동작하는 simple-curl을 만들어 보자.
+
+{empty} + 
+
+=== 요구 사항
 
 scurl은 다음과 같이 동작합니다.
 
 * URL을 입력 인자로 받아 요청을 보내고, 응답을 화면에 출력한다.
-
 * Option으로 GET외에 다른 method(HEAD, POST, PUT, DELETE)로 요청할 수 있다.
-
 * POST, PUT 등의 method를 사용할 때는 전송할 데이터를 지정할 수 있다.
-
 * 기본적으로는 request header와 response header를 출력하지 않지만, option에 따라 출력할 수 있다.
-
 * 응답의 ContentType을 확인하여 "text/*", "application/json"만 화면에 출력한다.
-
 * POST, PUT의 경우 -H로 Content-Type이 지정되지 않으면, application/x-www-form-urlencoded 를 기본 타입으로 사용한다.
 
 {empty} + 
 
-==== Usage
+=== 사용법
 
 [source,console]
 ----
@@ -34,7 +33,7 @@ Options:
 
 {empty} +
 
-==== 호출 예제 
+=== 동작 보기
 
 1. GET 요청
 +
