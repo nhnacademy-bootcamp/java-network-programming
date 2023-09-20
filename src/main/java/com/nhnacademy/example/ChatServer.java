@@ -27,23 +27,22 @@ public class ChatServer extends Thread {
 
     @Override
     public void run() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))) {
-            this.writer = writer;
+        try (BufferedReader socketIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                BufferedWriter socketOut = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))) {
+            this.writer = socketOut;
             while (!Thread.currentThread().isInterrupted()) {
-                String line = reader.readLine();
+                String line = socketIn.readLine();
 
-                System.out.println(getName() + " - " + line);
                 String[] tokens = line.trim().split(":");
                 if (tokens.length == 1) {
                     if (tokens[0].equalsIgnoreCase("who")) {
-                        writer.write(getName() + "\n");
-                        writer.flush();
+                        socketOut.write(getName() + "\n");
+                        socketOut.flush();
                     }
                 } else if (tokens.length > 1) {
-                    if (tokens[0].equalsIgnoreCase("ID")) {
+                    if (tokens[0].equalsIgnoreCase("id")) {
                         setName(tokens[1]);
-                    } else if ((tokens[0].charAt(0) == '@') && (tokens[0].length() > 1)) {
+                    } else if ((tokens[0].length() > 1) && (tokens[0].charAt(0) == '@')) {
                         String targetId = tokens[0].substring(1, tokens[0].length());
                         if (targetId.equals("@")) {
                             for (ChatServer server : ChatServer.serverList) {
@@ -57,9 +56,13 @@ public class ChatServer extends Thread {
                                 }
                             }
                         }
+                    } else if ((tokens[0].length() > 1) && (tokens[0].charAt(0) == '!')) {
+                        String command = tokens[0].substring(1, tokens[0].length());
+                        if (command.equalsIgnoreCase("exit")) {
+                            Thread.currentThread().interrupt();
+                        }
                     }
                 }
-
             }
         } catch (IOException ignore) {
             //

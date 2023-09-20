@@ -7,7 +7,6 @@ import java.net.Socket;
 public class Quiz08 {
     public static void main(String[] args) {
         int port = 1234;
-        int bufferSize = 2048;
 
         if (args.length > 0) {
             try {
