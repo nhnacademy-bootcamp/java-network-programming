@@ -15,6 +15,8 @@
 * Client 메시지 시작에 대상 client id가 추가되어 있는 경우, 해당 client에만 메시지를 전달한다.
 ** 대상 client id는 "@[ID] message"로 @ 다음에 붙여서 온다.
 ** user1에 hello 메시지를 보내기 위해서는 "@user1 hello"로 보내면 된다.
+* 제어 명령을 구현한다.
+** !list 명령은 접속되어 있는 client의 id list를 반환한다.
 
 {empty} +
 
@@ -30,3 +32,5 @@
 * Client가 server에 정상적으로 접속하면, 설정된 id를 전송한다.
 
 * 특정 client에만 메시지 전송을 원할 경우, 메시지 앞에 @[대상 id]을 추가한다.
+* 제어 명령을 구현한다.
+** !exit 명령은 clie은 연결을 끊는다.
