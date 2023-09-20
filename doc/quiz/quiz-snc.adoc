@@ -1,4 +1,4 @@
-== Quiz-XX. snc(simple-nc) 만들기
+== Quiz-snc. snc(simple-nc) 만들기
 
 {empty} + 
 
