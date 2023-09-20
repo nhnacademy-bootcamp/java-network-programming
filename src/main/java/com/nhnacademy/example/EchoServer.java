@@ -11,19 +11,31 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class EchoServer extends Thread {
+    static List<EchoServer> serverList = new LinkedList<>();
     Socket socket;
+    BufferedWriter writer;
 
     public EchoServer(Socket socket) {
         this.socket = socket;
+        serverList.add(this);
+    }
+
+    public void send(String message) throws IOException {
+        writer.write(message);
+        writer.flush();
     }
 
     @Override
     public void run() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))) {
+            this.writer = writer;
             while (!Thread.currentThread().isInterrupted()) {
-                writer.write(reader.readLine() + "\n");
-                writer.flush();
+                String line = reader.readLine() + "\n";
+
+                for (EchoServer server : serverList) {
+                    server.send(line);
+                }
             }
         } catch (IOException ignore) {
             //
@@ -38,7 +50,6 @@ public class EchoServer extends Thread {
 
     public static void main(String[] args) {
         int port = 1234;
-        List<EchoServer> serverList = new LinkedList<>();
 
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             while (!Thread.currentThread().isInterrupted()) {
@@ -46,8 +57,6 @@ public class EchoServer extends Thread {
 
                 EchoServer server = new EchoServer(socket);
                 server.start();
-
-                serverList.add(server);
             }
 
         } catch (IOException e) {
