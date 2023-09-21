@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Microsoft Visio, SVG Export에서 생성되었습니다. bingo.svg 페이지-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="4.45153in" height="4.45153in"
+		viewBox="0 0 320.51 320.51" xml:space="preserve" color-interpolation-filters="sRGB" class="st6">
+	<v:documentProperties v:langID="1042" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#00b0f0;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#000000;font-family:맑은 고딕;font-size:0.833336em}
+		.st3 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st4 {fill:#e5b9b5;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st5 {fill:none;stroke:#ff0000;stroke-linecap:round;stroke-linejoin:round;stroke-width:3}
+		.st6 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>페이지-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(18.5079,-245.309)">
+			<title>사각형</title>
+			<desc>1</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st1"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>1</text>		</g>
+		<g id="shape2-4" v:mID="2" v:groupContext="shape" transform="translate(75.2008,-245.309)">
+			<title>사각형.2</title>
+			<desc>9</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>9</text>		</g>
+		<g id="shape3-7" v:mID="3" v:groupContext="shape" transform="translate(131.894,-245.309)">
+			<title>사각형.3</title>
+			<desc>20</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>20</text>		</g>
+		<g id="shape4-10" v:mID="4" v:groupContext="shape" transform="translate(188.587,-245.309)">
+			<title>사각형.4</title>
+			<desc>13</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>13</text>		</g>
+		<g id="shape5-13" v:mID="5" v:groupContext="shape" transform="translate(245.28,-245.309)">
+			<title>사각형.5</title>
+			<desc>6</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st4"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>6</text>		</g>
+		<g id="shape7-16" v:mID="7" v:groupContext="shape" transform="translate(18.5079,-188.616)">
+			<title>사각형.7</title>
+			<desc>17</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>17</text>		</g>
+		<g id="shape8-19" v:mID="8" v:groupContext="shape" transform="translate(75.2008,-188.616)">
+			<title>사각형.8</title>
+			<desc>23</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st1"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>23</text>		</g>
+		<g id="shape9-22" v:mID="9" v:groupContext="shape" transform="translate(131.894,-188.616)">
+			<title>사각형.9</title>
+			<desc>2</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>2</text>		</g>
+		<g id="shape10-25" v:mID="10" v:groupContext="shape" transform="translate(188.587,-188.616)">
+			<title>사각형.10</title>
+			<desc>22</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st4"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>22</text>		</g>
+		<g id="shape11-28" v:mID="11" v:groupContext="shape" transform="translate(245.28,-188.616)">
+			<title>사각형.11</title>
+			<desc>18</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>18</text>		</g>
+		<g id="shape12-31" v:mID="12" v:groupContext="shape" transform="translate(18.5079,-131.923)">
+			<title>사각형.12</title>
+			<desc>5</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st4"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>5</text>		</g>
+		<g id="shape13-34" v:mID="13" v:groupContext="shape" transform="translate(75.2008,-131.923)">
+			<title>사각형.13</title>
+			<desc>10</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>10</text>		</g>
+		<g id="shape14-37" v:mID="14" v:groupContext="shape" transform="translate(131.894,-131.923)">
+			<title>사각형.14</title>
+			<desc>25</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st1"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>25</text>		</g>
+		<g id="shape15-40" v:mID="15" v:groupContext="shape" transform="translate(188.587,-131.923)">
+			<title>사각형.15</title>
+			<desc>16</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>16</text>		</g>
+		<g id="shape16-43" v:mID="16" v:groupContext="shape" transform="translate(245.28,-131.923)">
+			<title>사각형.16</title>
+			<desc>7</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st4"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>7</text>		</g>
+		<g id="shape17-46" v:mID="17" v:groupContext="shape" transform="translate(18.5079,-75.2303)">
+			<title>사각형.17</title>
+			<desc>19</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st1"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>19</text>		</g>
+		<g id="shape18-49" v:mID="18" v:groupContext="shape" transform="translate(75.2008,-75.2303)">
+			<title>사각형.18</title>
+			<desc>3</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st4"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>3</text>		</g>
+		<g id="shape19-52" v:mID="19" v:groupContext="shape" transform="translate(131.894,-75.2303)">
+			<title>사각형.19</title>
+			<desc>12</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st4"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>12</text>		</g>
+		<g id="shape20-55" v:mID="20" v:groupContext="shape" transform="translate(188.587,-75.2303)">
+			<title>사각형.20</title>
+			<desc>11</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st1"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>11</text>		</g>
+		<g id="shape21-58" v:mID="21" v:groupContext="shape" transform="translate(245.28,-75.2303)">
+			<title>사각형.21</title>
+			<desc>4</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>4</text>		</g>
+		<g id="shape22-61" v:mID="22" v:groupContext="shape" transform="translate(18.5079,-18.5374)">
+			<title>사각형.22</title>
+			<desc>24</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st1"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>24</text>		</g>
+		<g id="shape23-64" v:mID="23" v:groupContext="shape" transform="translate(75.2008,-18.5374)">
+			<title>사각형.23</title>
+			<desc>8</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="25.59" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>8</text>		</g>
+		<g id="shape24-67" v:mID="24" v:groupContext="shape" transform="translate(131.894,-18.5374)">
+			<title>사각형.24</title>
+			<desc>15</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st3"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>15</text>		</g>
+		<g id="shape25-70" v:mID="25" v:groupContext="shape" transform="translate(188.587,-18.5374)">
+			<title>사각형.25</title>
+			<desc>21</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st4"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>21</text>		</g>
+		<g id="shape26-73" v:mID="26" v:groupContext="shape" transform="translate(245.28,-18.5374)">
+			<title>사각형.26</title>
+			<desc>14</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="292.163" width="56.7" height="56.6929"/>
+			<rect x="0" y="263.817" width="56.6929" height="56.6929" class="st1"/>
+			<text x="22.84" y="295.16" class="st2" v:langID="1042"><v:paragraph v:horizAlign="1"/><v:tabList/>14</text>		</g>
+		<g id="shape27-76" v:mID="27" v:groupContext="shape" transform="translate(228.135,-191.06) rotate(45)">
+			<title>사각형.27</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<rect x="0" y="272.321" width="400.838" height="48.189" class="st5"/>
+		</g>
+	</g>
+</svg>
