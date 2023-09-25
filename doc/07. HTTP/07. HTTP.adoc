@@ -1,0 +1,1318 @@
+== 시작하기 전에
+
+- chrome browser
+- nc (netcat)
+- curl
+- python
+
+== 시작하기 전에
+
+- Ethernet
+- TCP/IP
+- Well Known Port
+- socket programming
+- OSI 7 layers
+
+= HTTP (Hypertext Transfer Protocol)
+
+> The Hypertext Transfer Protocol (HTTP) is an **application-level protocol** for distributed, collaborative, hypermedia information systems. (from. rfc2616)
+
+=== Hypertext
+
+=== Transfer Protocol
+
+=== Application-level protocol
+
+== Application-level protocol
+
+=== OSI 7 layers
+
+image::inline-image-1.png[]
+
+(from wikipedia. https://en.wikipedia.org/wiki/OSI_model)
+
+== Transfer Protocol
+
+- header, control
+- payload, body, data
+
+image::inline-image-2.png[]
+
+== Ethernet
+
+=== Ethernet Frame
+
+![Ethernet_802.1Q_Insert.svg](./Ethernet_802.1Q_Insert.svg)
+(from wikipedia. https://en.wikipedia.org/wiki/EtherType
+
+=== EtherType
+
+[cols="1,5"]
+|===
+^s|EtherType ^s|Protocol
+^|0x0800    |`Internet Protocol version 4 (IPv4)`
+^|0x0806    |Address Resolution Protocol (ARP)
+^|0x8035    |Reverse Address Resolution Protocol
+^|0x8137    |IPX
+^|0x86DD    |Internet Protocol Version 6 (IPv6)
+|===
+
+== IP (Internet Protocol)
+
+=== IP Header
+
+```
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |Version|  IHL  |Type of Service|          Total Length         |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |         Identification        |Flags|      Fragment Offset    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Time to Live |    Protocol   |         Header Checksum       |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                       Source Address                          |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Destination Address                        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Options                    |    Padding    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+```
+
+(from rfc791)
+
+=== IP Protocol
+
+[cols="1,2,1,4,2"]
+|====
+^s|  Hex ^s| Protocol Number ^s| Keyword ^s| Protocol                           ^s| References/RFC 
+^| 0x01 ^|               1 ^|  ICMP   | Internet Control Message Protocol  |    RFC 792
+^| 0x02 ^|               2 ^|  IGMP   | Internet Group Management Protocol |    RFC 1112
+^| 0x06 ^|               6 ^|  `TCP`  | `Transmission Control Protocol`    |    RFC 793
+^| 0x11 ^|              17 ^|   UDP   | User Datagram Protocol             |    RFC 768
+|====
+
+== TCP (Transmission Control Protocol)
+
+=== TCP Header
+
+```
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |          Source Port          |       Destination Port        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                        Sequence Number                        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Acknowledgment Number                      |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Data |           |U|A|P|R|S|F|                               |
+   | Offset| Reserved  |R|C|S|S|Y|I|            Window             |
+   |       |           |G|K|H|T|N|N|                               |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |           Checksum            |         Urgent Pointer        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Options                    |    Padding    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                             data                              |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+```
+
+(from rfc794)
+
+== Protocol layers
+
+=== 
+
+image::Inline-image-3.png[]
+
+=== 
+
+image:Inline-image-4.png[]
+
+=== 
+
+image:Inline-image-5.png[]
+
+=== 
+
+image:Inline-image-6.png[]
+
+=== 
+
+image:Inline-image-7.png[]
+
+== Hypertext
+
+= WEB
+
+- World Wide Web
+
+== 팀 버너스리 (Sir Tim Berners-Lee, 1955-06-08 ~ )
+
+image::https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg[]
+
+== WWW (World Wide Web)
+
+- 89년 3월 팀 버너스리 외 n 명의 과학자들의 제안으로 시작
+
+== WWW (World Wide Web)
+
+=== URL (Uniform Resource Locator)
+
+- 통일된 웹 자원(Resource)의 위치 지정 방법
+  - https://www.ietf.org/rfc/rfc1738.txt
+
+=== HTTP (HyperText Transfer Protocol)
+
+- 웹의 자원 위치에 접근하는 프로토콜(protocol)
+
+  - HTTP/1.0 https://tools.ietf.org/html/rfc1945
+
+  - HTTP/1.1 https://tools.ietf.org/html/rfc2616
+
+  - HTTP/2.0 https://tools.ietf.org/html/rfc7540
+
+  - HTTP/3.0
+
+     
+
+    https://www.rfc-editor.org/rfc/rfc9114.html
+
+     
+
+    2022.06
+
+    - HTTP Semantics https://www.rfc-editor.org/rfc/rfc9110.html
+    - HTTP Caching https://www.rfc-editor.org/rfc/rfc9111.html
+    - HTTP/1.1 https://www.rfc-editor.org/rfc/rfc9112.html
+    - HTTP/2.0 https://www.rfc-editor.org/rfc/rfc9113.html
+    - QPACK: Field Compression for HTTP/3 https://www.rfc-editor.org/rfc/rfc9204.html
+
+=== HTML (HyperText Markup Language)
+
+- 자원들 사이를 쉽게 항해 할 수 있는 언어
+  - HTML 3.2, 4.0, 4.1, 5.0, 5.1, 5.2 ..
+  - Living Standard - https://html.spec.whatwg.org/multipage/
+
+== WWW (World Wide Web)
+
+=== 
+
+- 웹 브라우저가 웹서버의 HTML 로 기술된 리소스를
+
+=== 
+
+- URL 를 통해 요청하여
+
+=== 
+
+- HTTP 프로토콜을 사용하여 받아서 표현하는 것
+
+== URL (Uniform Resource Locator)
+
+=== URL
+
+```
+<스킴>://<사용자이름>:<비밀번호>@<호스트>:<포트>/<경로>;<파라미터>?<질의>#<프레그먼트>
+```
+
+=== 브라우저 주소
+
+- ```
+  https://nhnent.dooray.com/project/to?userWorkflowClass=registered,working
+  ```
+
+  - 스킴: `https`, `http`, `ftp`, `file` (= 프로토콜)
+  - 호스트: `nhnent.dooray.com` (= 서버)
+  - 경로: `/project/to`
+  - 질의: `userWorkflowClass=registered,working`
+
+== HTML
+
+=== 
+
+HyperText Markup Language
+
+=== 
+
+**HyperText** Markup Language
+
+== Text (전통적 텍스트)
+
+=== 신문
+
+=== 논문
+
+- 레퍼런스
+  - 각주, 미주
+
+== HyperText (HyperMedia)
+
+=== 
+
+> Hypertext is **text** displayed on a computer display or other electronic devices **with references (hyperlinks) to other text** which the reader can **immediately access**, or where text can be revealed progressively at multiple levels of detail
+
+- 즉시 다른 텍스트 레퍼런스에 접근 가능
+
+=== 
+
+> Apart from text, the term "hypertext" is also sometimes used to describe tables, **images**, and **other presentational content forms with integrated hyperlinks**.
+
+- 이미지 외 기타 표현가능한 컨텐츠를 포함
+- (from. https://en.wikipedia.org/wiki/Hypertext
+
+=== 
+
+- 1960년대 컴퓨터 개척자이자 철학자인 테드 넬슨이 만든 단어
+  - [https://ko.wikipedia.org/wiki/%ED%85%8C%EB%93%9C_%EB%84%AC%EC%8A%A8](https://ko.wikipedia.org/wiki/테드_넬슨)(테드넬슨 Theodor Holm "Ted" Nelson)
+
+== HTML (HyperText Markup Language)
+
+=== 
+
+- HyperText 를 만들 수 있는 조판 언어 (Markup Language)
+
+=== 
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome, NHN Academy</title>
+    </head>
+    <body>
+        <h3> Welcome </h3>
+        <p> Hello, NHN Academy. </p>
+        <p>
+            <a href="http://nhnacademy.com">
+                <img src="https://nhnacademy.com/img/logo/academy_bottom_logo.png" />
+            </a>
+        </p>
+    </body>
+</html>
+```
+
+=== 
+
+![image.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174577022291306789)
+
+== HTTP (HyperText Transfer Protocol)
+
+=== 
+
+- **HyperText** (**HyperMedia**)를 클라이언트와 서버 사이에 주고 받을 수 있게 정의한 프로토콜
+
+- TCP/IP 프로토콜 위에서 동작하는
+
+   
+
+  Text Based
+
+   
+
+  프로토콜
+
+  - 사람이 눈으로 보고 이해 가능!
+
+== (실습 환경 구성) 리눅스 hosts 파일을 수정합니다.
+
+- 관리자 권한으로 `/etc/hosts` 파일을 수정합니다.
+
+```
+$ sudo nano /etc/hosts
+```
+
+=== 수정 내용
+
+- 다음 내용을 추가 합니다.
+
+```
+= IP 도메인
+127.0.0.1 test-vm.com 
+```
+
+== (실습 환경 구성) hosts 파일을 수정합니다.
+
+=== Windows
+
+- 메모장(또는 다른 편집기)를 "관리자 권한"으로 실행하여 다음 파일을 수정합니다.
+  - `C:\Windows\System32\drivers\etc\hosts`
+
+=== MAC
+
+- 관리자 권한으로 `/etc/hosts` 파일을 수정합니다.
+
+```
+$ sudo vi /etc/hosts
+```
+
+=== 수정 내용
+
+- 다음 내용을 추가 합니다.
+
+```
+= IP 도메인
+125.6.39.148 test-vm.com 
+```
+
+=== download
+
+```
+$ cd
+$ mkdir doc-root
+$ cd doc-root
+$ wget --content-disposition 'https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/files/3174577530712035066?disposition=attachment'
+$ wget --content-disposition 'https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/files/3174575063969469821?disposition=attachment'
+$ wget --content-disposition 'https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/files/3174575063971385590?disposition=attachment'
+$ wget --content-disposition 'https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/files/3174575063977807753?disposition=attachment'
+$ wget --content-disposition 'https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/files/3174575063978217528?disposition=attachment'
+```
+
+== (실습) 웹 브라우저의 요청을 확인해봅시다.
+
+=== ubuntu 터미널 실행
+
+```
+$ nc -l 3000
+```
+
+=== 브라우저에서 실행
+
+```
+http://test-vm.com:3000/welcome.html
+```
+
+=== 브라우저의 요청 확인
+
+```http
+GET /welcome.html HTTP/1.1
+Host: test-vm.com:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: ko
+```
+
+== (실습) 웹 서버의 응답을 확인해봅니다.
+
+```
+http://test-vm.com:3000/welcome.html
+```
+
+=== ubuntu 터미널에서 실행
+
+- python2
+
+```
+$ python -m SimpleHTTPServer 3000  
+```
+
+- python3
+
+```
+$ python -m http.server 3000  
+```
+
+=== ubuntu 터미널에서 실행
+
+```
+$ nc test-vm.com 3000
+GET /welcome.html HTTP/1.1
+Host: test-vm.com:3000
+```
+
+=== Response
+
+```http
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/2.7.13
+Date: Sat, 15 Jan 2022 19:09:33 GMT
+Content-type: text/html
+Content-Length: 358
+Last-Modified: Sat, 15 Jan 2022 18:23:48 GMT
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome, NHN Academy</title>
+    </head>
+    <body>
+        <h3> Welcome </h3>
+        <p> Hello, NHN Academy. </p>
+        <p>
+            <a href="http://nhnacademy.com">
+                <img src="https://nhnacademy.com/img/logo/academy_bottom_logo.png" />
+            </a>
+        </p>
+    </body>
+</html>
+```
+
+== 개발 도구
+
+=== 크롬 개발자 도구
+
+- Windows: `ctrl + shift + i`
+- MAC: `cmd + option + i`
+
+=== 
+
+```
+http://test-vm.com:3000/welcome.html
+```
+
+== Request
+
+=== 요청의 구성
+
+```
+<메서드> <요청 URL> <버전>
+<헤더>
+
+<엔터티 본문>
+```
+
+=== 
+
+```http
+GET /welcome.html HTTP/1.1
+Host: test-vm.com:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+DNT: 1
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: ko
+If-Modified-Since: Sat, 15 Jan 2022 18:23:48 GMT
+```
+
+== Response
+
+```
+<버전> <상태 코드> <사유 구절>
+<헤더>
+
+<엔터티 본문>
+```
+
+=== 응답의 구성
+
+```http
+HTTP/1.0 200 OK
+Server: SimpleHTTP/0.6 Python/2.7.13
+Date: Sat, 15 Jan 2022 19:09:33 GMT
+Content-type: text/html
+Content-Length: 358
+Last-Modified: Sat, 15 Jan 2022 18:23:48 GMT
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome, NHN Academy</title>
+    </head>
+    <body>
+        <h3> Welcome </h3>
+        <p> Hello, NHN Academy. </p>
+        <p>
+            <a href="http://nhnacademy.com">
+                <img src="https://nhnacademy.com/img/logo/academy_bottom_logo.png" />
+            </a>
+        </p>
+    </body>
+</html>
+```
+
+== 요청 첫 줄
+
+=== 
+
+```
+<메서드> <요청 URL> <버전>
+GET /welcome.html HTTP/1.1
+```
+
+=== 메서드
+
+- `GET`
+- `POST` (본문 있음)
+- HEAD
+- OPTIONS
+- PUT (본문 있음)
+- DELETE
+- TRACE
+
+=== 요청 URL
+
+- `/welcome.html`
+
+=== 버전
+
+```
+HTTP/<메이저>.<마이너>
+```
+
+== 응답 첫 줄
+
+=== 
+
+```
+<버전> <상태 코드> <사유 구절>
+HTTP/1.0 200 OK
+```
+
+=== 버전
+
+- 0.9, 1.0, `1.1`, 2.0
+
+=== 상태 코드 (Status Code)
+
+- 1xx: 정보 제공
+- 2xx: 성공
+- 3xx: 리다이렉션
+- 4xx: 클라이언트의 오류
+- 5xx: 서버의 오류
+
+=== 사유 구절 (Reason Phrase)
+
+- 200 OK
+- 401 Unathorized
+- 404 Not Found
+
+== 헤더 (Header)
+
+- 요청
+
+```
+<메서드> <요청 URL> <버전>
+<헤더>
+
+<엔터티 본문>
+```
+
+- 응답
+
+```
+<버전> <상태 코드> <사유 구절>
+<헤더>
+
+<엔터티 본문>
+```
+
+== 헤더의 예
+
+- 요청 헤더 중
+
+```http
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: ko
+```
+
+- 응답 헤더 중
+
+```http
+Server: SimpleHTTP/0.6 Python/2.7.13
+Date: Sat, 15 Jan 2022 19:09:33 GMT
+Content-type: text/html
+Content-Length: 314
+Last-Modified: Sat, 15 Jan 2022 18:23:48 GMT
+```
+
+== 헤더 종류
+
+- 일반 헤더
+- 요청 헤더
+- 응답 헤더
+- Entity 헤더
+- 확장 헤더
+
+=== 참고
+
+- https://developer.mozilla.org/ko/docs/Web/HTTP/Headers
+- https://datatracker.ietf.org/doc/html/rfc2616#section-14
+
+== 엔터티 본문
+
+- 요청
+
+```
+<메서드> <요청 URL> <버전>
+<헤더>
+
+<엔터티 본문>
+```
+
+- 응답
+
+```
+<버전> <상태 코드> <사유 구절>
+<헤더>
+
+<엔터티 본문>
+```
+
+=== HTML, 이미지, 비디오 등 등
+
+== GET vs. POST
+
+=== GET
+
+- 리소스를 요청하기 위한 메서드
+
+=== POST
+
+- 서버에 입력 데이타를 전송하기 위한 메서드
+- 주로 HTML 폼을 사용하기 위하여 많이 사용됨
+
+== GET 예제
+
+=== 
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome, NHN Academy</title>
+    </head>
+    <body>
+        <h3> Welcome </h3>
+        <form action="./welcome.html" method=GET >
+          name: <br/>
+          <input type="text"     name="name"   > <br/>
+          content: <br/>
+          <input type="textarea" name="content"> <br/>
+          <input type="submit"   name="send" value="send">
+        </form>
+    </body>
+</html>
+```
+
+=== 
+
+![Inline-image-2018-01-15 21.16.06.693.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569713740966708) -> ![Inline-image-2018-01-15 21.16.15.885.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569714171959246)
+
+=== 주소창
+
+```
+http://test-vm.com:3000/welcome.html?name=TEST-NAME&content=TEST-CONTENT&send=send
+```
+
+=== 실제 요청
+
+```http
+GET /welcome.html?name=TEST-NAME&content=TEST-CONTENT&send=send HTTP/1.1
+Host: test-vm.com:3000
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+DNT: 1
+Referer: http://test-vm.com:3000/form-get1.html
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: ko
+If-Modified-Since: Sat, 15 Jan 2022 23:30:56 GMT
+```
+
+== POST
+
+=== 
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome, NHN Academy</title>
+    </head>
+    <body>
+        <h3> Welcome </h3>
+        <form action="./welcome.html" method=POST>
+          name: <br/>
+          <input type="text"     name="name"   ><br/>
+          content: <br/>
+          <input type="textarea" name="content"><br/>
+          <input type="submit"   name="send" value="send">
+        </form>
+    </body>
+</html>
+```
+
+=== 주소창
+
+```
+http://test-vm.com:3000/welcome.html
+```
+
+=== 실제 요청
+
+```http
+POST /welcome.html HTTP/1.1
+Host: test-vm.com:3000
+Connection: keep-alive
+Content-Length: 45
+Cache-Control: max-age=0
+Origin: http://test-vm.com
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+DNT: 1
+Referer: http://test-vm.com:3000/form-post1.html
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ko
+
+name=TEST-NAME&content=TEST-CONTENT&send=send
+```
+
+== GET POST 차이점
+
+- 메서드: GET vs. POST
+- 요청 주소:
+  - GET: `/welcome.html?name=TEST-NAME&content=TEST-CONTENT&send=send`
+  - POST: `/welcome.html`
+- 헤더
+  - GET: `Content-Type`, `Content-Length` 헤더 없음.
+  - POST: `Content-Type: application/x-www-form-urlencoded`, `Content-Length: 45`
+
+== GET vs. POST
+
+- GET 은 전송데이타 길이에 제한이 있음. 브라우저마다 상이함.
+- GET, POST 는 만들어진 목적이 다름
+
+== 개발 도구
+
+=== [httpbin.org](http://httpbin.org/)
+
+- [https://httpbin.org](https://httpbin.org/)
+- https://httpbin.org/get
+- https://httpbin.org/post
+
+== 주요 상태 코드 (Status Code)
+
+- 응답의 첫 줄 다시 한 번
+
+```http
+HTTP/1.0 200 OK
+```
+
+=== 1xx: 정보성
+
+- 100 Continue
+- 101 Switching Protocols
+
+=== 2xx: 성공
+
+- `200 OK`
+- 201 Created
+- 202 Accepted
+- 204 No Content
+- 205 Reset Content
+- 206 Partial Content
+
+=== 3xx: 리다이렉션
+
+- 300 Multiple Choices
+- `301 Moved Permanently`
+- `302 Found`
+- 303 See Other
+- 304 Not Modified
+- 305 Use Proxy
+- 307 Temporary Redirect
+
+=== 4xx: 클라이언트 오류
+
+- 400 Bad Request
+- `401 Unauthorized`
+- 402 Payment Required
+- `403 Forbidden`
+- `404 Not Found`
+- `405 Method Not Allowed`
+- 405 Not Acceptable
+- 408 Request Timeout
+- 410 Gone
+- 411 Length Required
+- 412 Precondition Failed
+- 415 Unsupported Media Type
+
+=== 5xx: 서버 오류
+
+- `500 Internal Server Error`
+- 501 Not Implemented
+- 502 Bad Gateway
+- `503 Service Unavaliable`
+- 504 Gateway Timeout
+- 505 HTTP Version Not Surpported
+
+== 헤더
+
+=== 일반 헤더 (Genenral Headers)
+
+- 클라이언트 서버 양 쪽에서 모두 사용
+  - 예) `Date: Sat, 15 Jan 2022 19:09:33 GMT`
+- 주요 헤더
+  - `Conntection`
+  - Date
+  - `Transfer-Encoding`
+  - Upgrade
+  - `Cache-Control`
+  - `Pragma`
+
+=== 요청 헤더 (Request Headers)
+
+- 클라이언트에서 사용
+  - 예) `Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`
+- 주요 헤더
+  - Client-IP
+  - `Host` : HTTP/1.1 필수 헤더
+  - `Referer`
+  - `Accept`
+  - `Accept-Charset`
+  - `Accept-Encoding`
+  - `Accept-Language`
+  - Expect
+  - If-Match
+  - If-Modified-Since
+  - If-None-Match
+  - If-Range
+  - If-Unmodified-Since
+  - `Cookie`
+
+=== 응답 헤더 (Response Headers)
+
+- 서버에서 사용
+  - 예) `Server: SimpleHTTP/0.6 Python/2.7.13`
+- 주요헤더
+  - Server
+  - `Set-Cookie`
+
+=== 엔터티 헤더 (Entity Headers)
+
+- 엔터티 본문에 대한 헤더.
+  - 예) `Content-type: text/html`
+- 주요 헤더
+  - Allow
+  - `Location`
+  - Content-Encoding
+  - Content-Language
+  - `Content-Length`
+  - Content-Location
+  - Content-MD5
+  - Content-Range
+  - `Content-Type`
+  - `ETag`
+  - `Expires`
+  - `Last-Modified`
+
+== (실습) 헤더응답에 따른 브라우저의 동작
+
+=== 터미널 실행
+
+```
+$ nc -l 3000
+```
+
+=== 브라우저 요청
+
+```
+http://test-vm.com:3000
+```
+
+=== 터미널에서 응답
+
+```
+HTTP/1.1 302 Moved
+Location: https://nhnacademy.com
+```
+
+= 인증, 쿠키, 세션
+
+== HTTP 프로토콜
+
+=== Stateless
+
+== 쿠키 (Cookie)
+
+=== 
+
+- RFC6265 [HTTP State Management Mechanism](https://tools.ietf.org/html/rfc6265)
+- 서버가 클라이언트에 붙여둔 일종의 스티커(?)
+- 서버가 클라이언트에게 쿠키를 세팅 요청(`Set-Cookie:`) 하면 (스티커를 붙이면),
+- 클라이언트는 이후 서버에게 보내는 요청 헤더에 쿠키(`Cookie: `)를 표시해서 전송 (스티커를 붙인 채 다시 돌아와야 함)
+
+== 쿠키 종류
+
+=== 세션 쿠키 (Session Cookie)
+
+- 사용자가 브라우저를 사용하는 동안만 유효함.
+- 브라우저는 사용자가 브라우저를 사용하는 동안 Cookie 정보를 서버로 전달.
+
+=== 지속 쿠키 (Persistent Cookie)
+
+- 사용자가 브라우저를 종료하더라도 유지되는 쿠키
+- `Expires` 혹은 `Max-Age` 가 같이 설정되는 쿠키
+
+== 쿠키 동작 방법
+
+=== 
+
+```uml
+
+```
+
+== 쿠키 동작 방법
+
+=== 클라이언트 > 서버
+
+```http
+GET /index.html HTTP/1.1
+Host: test-vm.com
+```
+
+=== 클라이언트 < 서버
+
+```http
+HTTP/1.0 200 OK
+Set-cookie: name="guest"; domain="test-vm.com"
+Content-Type: text/html
+Content-Length: 5
+
+HELLO
+```
+
+=== 클라이언트 > 서버
+
+```http
+GET /index.html HTTP/1.1
+Host: test-vm.com
+Cookie: name="geust"
+```
+
+== (실습) 쿠키
+
+=== 터미널에서 실행
+
+```
+$ sudo nc -l 80
+```
+
+=== 브라우저에서 접속
+
+```
+http://test-vm.com
+```
+
+=== 터미널에서 응답
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 5
+Set-Cookie: name=cookie-name
+
+HELLO
+```
+
+=== 크롬에서 쿠키 확인
+
+- 개발자도구
+  - Application > Storage > Cookies
+
+== 쿠키 Set-Cookie
+
+=== Set-Cookie
+
+```
+Set-Cookie: <cookie-name>=<cookie-value>    # 브라우저 종료시 사라지는 쿠키
+Set-Cookie: <cookie-name>=<cookie-value>; Expires=<date>
+Set-Cookie: <cookie-name>=<cookie-value>; Max-Age=<non-zero-digit>
+Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Path=<path-value>
+Set-Cookie: <cookie-name>=<cookie-value>; Secure
+Set-Cookie: <cookie-name>=<cookie-value>; HttpOnly
+```
+
+*from. https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Set-Cookie*
+
+=== 
+
+- Expire: 만료 날짜 및 시간을 표시
+- Max-Age: 만료까지 남은 `초`를 표시
+- Domain: 쿠키를 사용할 도메인을 설정
+- Path: 쿠키를 사용할 Path 를 설정
+- Secure: `https` 커넥션인 경우에만 `Cookie` 로 전달
+- HttpOnly: javascript 에서 접근하지 못하도록 설정
+
+=== 참고: 두레이 쿠키
+
+```http
+Set-Cookie: SESSION=22e8780a-1193-4a46-9e7b-8be7561441ba; Domain=.dooray.com; Path=/; HttpOnly
+Set-Cookie: SCOUTER=z5qun4lqaei29g; Expires=Sat, 03-Feb-2085 05:49:12 GMT
+```
+
+== 쿠키 사용예
+
+=== 사용 세션 관리 (Session Management)
+
+=== 개인화 (Personalization)
+
+=== 사용자 추적 (Tracking)
+
+== 쿠키의 위험성
+
+- 로그인 관련 정보를 쿠키에만 넣어둔다면?
+- `Set-Cookie: id="userId"`
+- `Cookie: id="userId"`
+
+== 세션 (Session)
+
+=== 
+
+- 사용자 접속 시점에 임의의
+
+   
+
+  ```
+  세션 ID
+  ```
+
+   
+
+  를 발급
+
+  - `세션 ID` 만으로는 사용자 개인 정보를 추측해 낼 수 없는 형태여야 함.
+
+- 해당 `세션 ID`를 키로 하여 서버 저장소에 필요한 정보를 저장. (DB or Cache 등 모두 가능)
+
+=== 
+
+```http
+Set-Cookie: SESSION=22e8780a-1193-4a46-9e7b-8be7561441ba; Domain=.dooray.com; Path=/; HttpOnly
+Set-Cookie: SCOUTER=z5qun4lqaei29g; Expires=Sat, 03-Feb-2085 05:49:12 GMT
+```
+
+=== 
+
+```uml
+
+```
+
+= HTTPS (HTTP over SSL/TLS)
+
+== HTTPS (HTTP over SSL/TLS)
+
+![Inline-image-2018-01-16 01.43.00.662.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569715315746472)
+
+== Protocol layers (HTTP over SSL/TLS)
+
+=== 
+
+![Inline-image-2018-01-16 00.11.01.444.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569713694675129)
+
+=== 
+
+![Inline-image-2018-01-16 00.11.20.090.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569713658644337)
+IP over Ethernet
+
+=== 
+
+![Inline-image-2018-01-16 00.11.34.969.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569714122289956)
+
+=== 
+
+![Inline-image-2018-01-16 00.11.46.697.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569713698166126)
+
+=== 
+
+![Inline-image-2018-01-16 01.44.45.445.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569714266760585)
+
+![Inline-image-2018-01-16 01.45.03.030.png](https://nhnent.dooray.com/share/pages/Uc_QyyXfRE68gskXeqsAMw/attach-files/3174569713743288345)
+HTTP over SSL/TLS
+
+- Protocol over SSL/TLS
+  - https, ftps, imaps, ldaps, pop3s, smtps ...
+
+== SSL/TLS (Secure Socket Layer / Transport Layer Security)
+
+> The protocol allows client/server applications to communicate in a way that is designed **to prevent eavesdropping, tampering, or message forgery**. (from rfc5246, TLS1.2)
+
+=== SSL (Secure Socket Layer)
+
+- Netscape 에서 만듦
+  - SSL 1.0 (공개하지 않은 버전)
+  - SSL 2.0
+  - SSL 3.0
+
+=== TLS (Transport Layer Security)
+
+- IETF 에서 표준화
+  - TLS 1.0
+  - TLS 1.1
+  - TLS 1.2
+  - TLS 1.3
+
+== HTTPS (HTTP over SSL/TLS)
+
+- 대칭키 암호화 알고리즘 (Symetric Encryption Algorithm)
+- 비대칭키 암호화 알고리즘 (Asymetric Encryption Algorithm)
+- 키 교환 알고리즘 (Key Exchange Algorithm)
+- 인증서 (Certificate)
+- 인증기관 (Certificate Authority)
+
+== 대칭키 암호화 알고리즘
+
+- "암호화에 사용하는 키"와 "복호화에 사용하는 키"가 같은 알고리즘
+- 예)
+  - DES (Data Encryption Standard)
+  - AES (Adavanced Encryption Standard)
+- 암복호화 성능이 좋은 특징이 있음
+
+== 키 교환 알고리즘
+
+- 키 합의 (Key Agreement) - DH (Diffie–Hellman)
+- 키 전송 (Key Transport) - RSA
+
+== 비대칭키 암호화 알고리즘
+
+- 암복호화에 사용하는 키가 서로 다른 알고리즘
+- 공개키 & 개인키
+  - 공개키로 암호화 한 것은 개인키로 풀 수 있음
+  - 개인키로 암호화 한 것은 공개키로 풀 수 있음
+- 예)
+  - RSA
+
+== Handshake
+
+=== TCP 3 way handshake
+
+```uml
+
+```
+
+== Handshake
+
+=== SSL Full handshake
+
+```
+      Client                                               Server
+
+      ClientHello                  -------->
+                                                      ServerHello
+                                                     Certificate*
+                                               ServerKeyExchange*
+                                              CertificateRequest*
+                                   <--------      ServerHelloDone
+      Certificate*
+      ClientKeyExchange
+      CertificateVerify*
+      [ChangeCipherSpec]
+      Finished                     -------->
+                                               [ChangeCipherSpec]
+                                   <--------             Finished
+      Application Data             <------->     Application Data
+
+             Figure 1.  Message flow for a full handshake
+
+   * Indicates optional or situation-dependent messages that are not
+   always sent.
+```
+
+(from rfc5246 TLS1.2)
+
+- Handshake 의 결과는 `해당 세션에 암복호화에 사용할 대칭키`
+- Handshake 과정은 서버와 클라이언트가 `세션 데이타 암복호화에 사용할 대칭키를 나눠갖는 과정`
+
+== 암호화 알고리즘
+
+```
+Appendix C.  Cipher Suite Definitions
+
+Cipher Suite                            Key        Cipher         Mac
+                                        Exchange
+
+TLS_NULL_WITH_NULL_NULL                 NULL         NULL         NULL
+TLS_RSA_WITH_NULL_MD5                   RSA          NULL         MD5
+TLS_RSA_WITH_NULL_SHA                   RSA          NULL         SHA
+TLS_RSA_WITH_NULL_SHA256                RSA          NULL         SHA256
+TLS_RSA_WITH_RC4_128_MD5                RSA          RC4_128      MD5
+TLS_RSA_WITH_RC4_128_SHA                RSA          RC4_128      SHA
+TLS_RSA_WITH_3DES_EDE_CBC_SHA           RSA          3DES_EDE_CBC SHA
+TLS_RSA_WITH_AES_128_CBC_SHA            RSA          AES_128_CBC  SHA
+TLS_RSA_WITH_AES_256_CBC_SHA            RSA          AES_256_CBC  SHA
+TLS_RSA_WITH_AES_128_CBC_SHA256         RSA          AES_128_CBC  SHA256
+TLS_RSA_WITH_AES_256_CBC_SHA256         RSA          AES_256_CBC  SHA256
+TLS_DH_DSS_WITH_3DES_EDE_CBC_SHA        DH_DSS       3DES_EDE_CBC SHA
+TLS_DH_RSA_WITH_3DES_EDE_CBC_SHA        DH_RSA       3DES_EDE_CBC SHA
+TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA       DHE_DSS      3DES_EDE_CBC SHA
+TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA       DHE_RSA      3DES_EDE_CBC SHA
+TLS_DH_anon_WITH_RC4_128_MD5            DH_anon      RC4_128      MD5
+TLS_DH_anon_WITH_3DES_EDE_CBC_SHA       DH_anon      3DES_EDE_CBC SHA
+TLS_DH_DSS_WITH_AES_128_CBC_SHA         DH_DSS       AES_128_CBC  SHA
+TLS_DH_RSA_WITH_AES_128_CBC_SHA         DH_RSA       AES_128_CBC  SHA
+
+= 후략
+```
+
+(from rfc5246. TLS1.2)
+
+== 암호화 알고리즘
+
+```
+$ curl -v https://nhnent.dooray.com
+* Rebuilt URL to: https://nhnent.dooray.com/
+*   Trying 43.227.118.171...
+* TCP_NODELAY set
+* Connected to nhnent.dooray.com (43.227.118.171) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/cert.pem
+  CApath: none
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: C=KR; ST=Gyeonggi-do; L=Seongnam-si; O=NHN Entertainment co.,ltd; CN=*.dooray.com
+*  start date: Jul 19 00:00:00 2017 GMT
+*  expire date: Sep 17 23:59:59 2019 GMT
+*  subjectAltName: host "nhnent.dooray.com" matched cert's "*.dooray.com"
+*  issuer: C=US; O=thawte, Inc.; CN=thawte SSL CA - G2
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x7fed31000000)
+> GET / HTTP/2
+> Host: nhnent.dooray.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+* Connection state changed (MAX_CONCURRENT_STREAMS updated)!
+< HTTP/2 302
+< server: nginx
+< date: Mon, 15 Jan 2018 23:23:42 GMT
+< content-length: 0
+< set-cookie: SCOUTER=z7vve07q30ebiv; Expires=Sun, 03-Feb-2086 02:37:49 GMT
+< location: /sso?nextUrl=%2F
+< set-cookie: SESSION=c0a291cd-9da6-4029-8e9c-235d0ea578f4; Domain=.dooray.com; Path=/; HttpOnly
+< x-ua-compatible: IE=Edge
+<
+* Connection #0 to host nhnent.dooray.com left intact
+```

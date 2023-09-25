@@ -1,0 +1,251 @@
+= L3 Network Layer
+
+네트워크의 다음 계층은 여러분이 관심을 가지게 될 첫 번째 계층이며, OSI 모델에서는 네트워크 계층이라고 더 일반적인 이름으로 불립니다. 네트워크 계층 프로토콜은 데이터의 비트와 바이트가 패킷이라고 불리는 더 큰 그룹으로 어떻게 구성되는지, 서로 다른 기기가 서로를 찾는 데 사용되는 주소 지정 방식을 정의합니다. 인터넷 프로토콜 (IP)은 전 세계에서 가장 널리 사용되는 네트워크 계층 프로토콜이며, Java가 이해하는 유일한 네트워크 계층 프로토콜입니다.
+
+사실, 이것은 두 가지 프로토콜입니다. IPv4는 32비트 주소를 사용하며, IPv6는 128비트 주소를 사용하며 경로 설정을 돕는 몇 가지 다른 기술 기능을 추가합니다. 이 글을 작성하는 시점에서 IPv4는 인터넷 트래픽의 90% 이상을 여전히 차지하고 있지만, IPv6는 빠르게 증가하고 다음 판의 이 책이 나오기 전에 IPv4를 앞서갈 가능성이 높습니다. 이 두 가지는 매우 다른 네트워크 프로토콜이며 특별한 게이트웨이나 터널링 프로토콜 없이 동일한 네트워크에서 상호 운용하지 않지만, Java는 거의 모든 차이점을 숨깁니다.
+
+IPv4와 IPv6 모두 데이터가 데이터그램이라고 불리는 패킷을 통해 인터넷 계층을 통해 전송됩니다. 각 IPv4 데이터그램에는 20~60바이트 길이의 헤더와 최대 65,515바이트의 데이터를 포함하는 페이로드가 있습니다. (실제로 대부분의 IPv4 데이터그램은 몇십 바이트에서 조금 더 8킬로바이트를 넘지 않는 작은 크기를 가지고 있습니다.) IPv6 데이터그램에는 더 큰 헤더와 최대 4기가바이트의 데이터가 포함될 수 있습니다.
+
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/OSI_Model_v1.svg/800px-OSI_Model_v1.svg.png[]
+
+- Path Determination and Logical Addressing(IP)
+  - 데이타를 전송. 경로를 결정
+  - 어떻게 데이타를 보낼 것인가?
+
+== IP Internet Protocol - IPv4
+
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/IPv4_Packet-en.svg/1280px-IPv4_Packet-en.svg.png[]
+*from wikipedia IPv4 https://en.wikipedia.org/wiki/IPv4*
+
+- TTL- Time To Live
+- Protocol
+  - 6 TCP
+  - 17 UDP
+- Checksum
+- IP
+
+== IPv4 protocol
+
+```
+1 	ICMP 	Internet Control Message 		[RFC792]
+2 	IGMP 	Internet Group Management 		[RFC1112]
+6 	TCP 	Transmission Control 		[RFC-ietf-tcpm-rfc793bis-28]
+8 	EGP 	Exterior Gateway Protocol 		[RFC888][David_Mills]
+9 	IGP 	any private interior gateway (used by Cisco for their IGRP) 		[Internet_Assigned_Numbers_Authority]
+17 	UDP 	User Datagram 		[RFC768][Jon_Postel]
+```
+
+== IPv4 Address
+
+- 4bytes
+
+- 보통 한 바이트 씩 숫자로 읽어서 표시
+
+   
+
+  ```
+  223.1.1.1
+  ```
+
+  - ip 223.1.1.1
+  - netmask: 255.255.255.0
+
+== Subnet mask
+
+- 네트워크ID를 표시 하기 위해 사용
+
+== Subnet
+
+- 라우터를 통하지 않고 갈 수 있는 네트워크
+- 223.1.1
+- 223.1.2
+- 223.1.3
+
+== IP Addressing: CIDR Classless InterDomain Routing
+
+- 임의의 길이로 서브넷을 할 수 있음.
+
+- ```
+  a.b.c.d/x
+  ```
+
+   
+
+  형식
+
+  - x 가 subnet bit
+
+- `223.1.1.0/24`
+
+== A class, B class, C class
+
+- 옛날 이야기
+  - `/8` - A class
+  - `/16` - B class
+  - `/24` - C class
+
+== Network Layer - 라우터
+
+
+=== 포워딩
+
+- 데이타를 전달한다.
+  - 포워딩 테이블을 참조하여 데이타를 전달.
+  - 네트웍 ID 기준
+
+=== 라우팅
+
+- 포워딩 테이블을 만든다.
+
+== 포워딩
+
+=== 라우팅 테이블
+
+|      | Network destination | Netmask         | Gateway       | Interface     | Metric |
+| :--- | :------------------ | :-------------- | :------------ | :------------ | :----- |
+| 1    | 0.0.0.0             | 0.0.0.0         | 192.168.0.1   | 192.168.0.100 | 10     |
+| 2    | 127.0.0.0           | 255.0.0.0       | 127.0.0.1     | 127.0.0.1     | 1      |
+| 3    | 192.168.0.0         | 255.255.255.0   | 192.168.0.100 | 192.168.0.100 | 10     |
+| 4    | 192.168.0.100       | 255.255.255.255 | 127.0.0.1     | 127.0.0.1     | 10     |
+| 5    | 192.168.0.1         | 255.255.255.255 | 192.168.0.100 | 192.168.0.100 | 10     |
+
+- 개념 이해를 위한 예시.
+
+=== longest prefix matching
+
+- `192.168.0.100` 은 3번 규칙, 4번 규칙에 모두 적용가능. 가장 긴 prefix 가 매치하는 곳의 규칙을 따라 포워딩
+
+== (실습) 라우팅 테이블 확인
+
+```
+$ route -rn
+```
+
+== IPv4, IPv6
+
+- IPv4 는 32bit 주소 체계
+- IPv6 는 128bit 주소 체계
+  - 많이 사용되지 않음.
+
+== NAT Network Address Translation
+
+image::https://upload.wikimedia.org/wikipedia/commons/c/c7/NAT_Concept-en.svg[]
+
+- IP 고갈을 걱정하여 만들어 낸 기능
+- SRC PORT 도 변경이 됨.
+  - 서버입장에 클라이언트 IP 가 동일하게 보이는 현상이 있을 수 있음.
+
+== Private IP 사설 IP
+
+사설 IP 대역이 정의되어 있음.
+공인 IP 로는 사용되지 않음.
+
+| Name         | CIDR block     | Address range                 | Number of addresses | Classful description                    |
+| :----------- | :------------- | :---------------------------- | :------------------ | :-------------------------------------- |
+| 24-bit block | 10.0.0.0/8     | 10.0.0.0 – 10.255.255.255     | 16777216            | Single Class A.                         |
+| 20-bit block | 172.16.0.0/12  | 172.16.0.0 – 172.31.255.255   | 1048576             | Contiguous range of 16 Class B blocks.  |
+| 16-bit block | 192.168.0.0/16 | 192.168.0.0 – 192.168.255.255 | 65536               | Contiguous range of 256 Class C blocks. |
+
+== NAT 환경의 단점
+
+- 서버 운영이 불가능
+- 서로 다른 NAT 환경의 두 호스트가 직접 통신하는 것은 어려움
+
+== (실습) ifconfig
+
+```
+$ /sbin/ifconfig
+$ curl http://httpbin.org/ip
+```
+
+== IP Framgmentation
+
+- 헤더, Fragmentation 필드
+
+== DHCP Dynamic Host Control Protocol
+
+- 개별 호스트에 적절한 네트워크 정보를 설정하기 위한 프로토콜
+  - IP
+  - subnet mask or prefix
+  - router
+  - DNS
+
+== ICMP Internet Control Protocol
+
+- 네트워크 상태를 보고하기 위한 메세지
+- TTL 을 넘어가는 경우, source 에 알려줌.
+
+== ICMP
+
+목적지에 도달하지 못한 경우. 등
+
+[source,cosole]
+----
+Type  Code  description
+0        0         echo reply (ping)
+3        0         dest. network unreachable
+3        1         dest host unreachable
+3        2         dest protocol unreachable
+3        3         dest port unreachable
+3        6         dest network unknown
+3        7         dest host unknown
+4        0         source quench (congestion
+                     control - not used)
+8        0         echo request (ping)
+9        0         route advertisement
+10       0         router discovery
+11       0         TTL expired
+12       0         bad IP header
+----
+
+=== 실습
+
+[source,cosole]
+----
+$ traceroute naver.com   # linux
+$ tracert naver.com      # window
+----
+
+== 라우팅 알고리즘
+
+* 문제는 라우팅 포워드 테이블을 어떻게 구성할 것인가?
+
+=== 라우팅 알고리즘 - link-state 알고리즘
+
+* 라우팅 테이블을 구성하는 알고리즘
+* 전체 그래프 상태를 모두 알고 있는 상태로 가정
+** 서로 알고 있는 정보를 broadcasting
+* Shortest Path Algorithm - Dijkstra
+* OSPF Open Shortest Path First
+
+=== 라우팅 알고리즘 - distance-vector 알고리즘
+
+* 전체 그래프는 모르지만, 이웃으로 부터 이웃이 알고 있는 정보를 받아서 계산하는 방법
+* RIP Routing Information Protocol
+
+== 라우팅 알고리즘
+
+* IGP Interior gateway protocol
+** link-state 알고리즘
+** distance-vector 알고리즘
+* EGP Exterior gateway protocol
+** BGP Border Gateway Protocol
+
+== Autonomous System
+
+* Autonomous 자치권을 가진 시스템
+* 네트워크를 독립적으로 운영할 수 있는 단위
+** 회사, ISP ....
+* AS 내에서는 IGP 를 사용
+
+== BGP Border Gateway Protocol
+
+* AS 간 라우팅에 사용하는 알고리즘. inter AS 라우팅
+* AS 는 AS Number 를 부여 받음
+** link:https://한국인터넷정보센터.한국/jsp/business/management/asList.jsp[]
+* AS 간 라우팅은 계약에 따라서 진행
+* AS 간에 어떻게 연결되어 있는지 확인 가능.
+** https://bgpview.io/
+* 참고
+** https://www.yna.co.kr/view/AKR20211029101800017
+** https://www.msit.go.kr/bbs/view.do?sCode=user&mPid=112&mId=113&bbsSeqNo=94&nttSeqNo=3180886

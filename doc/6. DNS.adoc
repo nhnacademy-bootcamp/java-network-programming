@@ -1,0 +1,53 @@
+== Domain Name Service(DNS)
+
+컴퓨터 네트워크에서 사용되는 계층화된 분산 데이터베이스 시스템이다. DNS의 주요 목적은 사람이 이해할 수 있는 도메인 이름(예: www.example.com)을 컴퓨터가 이해할 수 있는 IP 주소(예: 192.168.1.1)로 변환하거나 그 반대로 IP 주소를 도메인 이름으로 변환하는 것이다.
+
+=== DNS의 역할과 주요 구성 요소
+
+* **도메인 이름 해석 (Name Resolution)**: DNS는 사용자가 입력한 도메인 이름을 해당 도메인에 대한 IP 주소로 해석합니다. 이것은 웹 브라우징, 이메일 통신, 파일 공유 및 다른 네트워크 활동에서 중요한 역할을 합니다.
+
+* **계층 구조**: DNS는 계층 구조를 가지고 있으며, 최상위 수준의 도메인(TLD, Top-Level Domain)에서부터 하위 수준 도메인(subdomain)까지 내려가는 방식으로 도메인 이름을 구성합니다. 예를 들어, "www.example.com"에서 ".com"은 최상위 수준 도메인이고 "example.com"은 하위 수준 도메인입니다.
+
+* **DNS 서버**: DNS 정보는 전 세계에 분산된 DNS 서버에 저장되어 있으며, 이들은 계층적인 구조를 가집니다. 루트 서버, 최상위 도메인 서버, 중간 도메인 서버 및 기업 또는 ISP(인터넷 서비스 제공업체)의 로컬 DNS 서버 등이 있습니다.
+
+* **DNS 쿼리**: 컴퓨터 또는 장치가 도메인 이름을 IP 주소로 변환하려면 DNS 쿼리를 보내야 합니다. 이 쿼리는 사용자 요청에 따라 로컬 DNS 서버 또는 상위 DNS 서버로 전달되고, 최종적으로 도메인에 대한 IP 주소를 반환합니다.
+
+* **DNS 캐싱**: DNS 서버는 이전에 검색한 도메인 이름에 대한 결과를 캐싱하여 빠른 응답을 제공합니다. 이를 통해 동일한 도메인 이름에 대한 반복적인 쿼리를 줄일 수 있습니다.
+
+DNS는 인터넷의 핵심 구성 요소 중 하나이며, 웹 브라우징, 이메일, 파일 공유 및 네트워크 통신과 같은 모든 온라인 활동에 필수적입니다. DNS는 사람이 이해할 수 있는 도메인 이름을 기억하기 쉬우며 컴퓨터가 이해할 수 있는 IP 주소로 변환하여 인터넷을 사용하는 데 편의성을 제공합니다.
+
+**지원하는 기능**
+
+* 레코드 타입
+** A: 도메인에 대한 IP 응답
+** NS: 특정 도메인의 Name Server 정보 응답
+** CNAME: canonical name 설정
+** MX: 도메인의 메일 수신 서버 주소를 응답
+** TXT: 임의 문자열 부가 정보 관리, SPF, DKIM 용으로도 사용
+*** https://en.wikipedia.org/wiki/TXT_record
+** SRV: IP 외에 Port 번호까지 서비스 가능
+*** https://en.wikipedia.org/wiki/SRV_record
+* 부하 분산
+** 하나의 도메인에 여러개의 IP 를 등록할 수 있음
+** 클라이언트는 응답 받은 여러 IP 중 하나를 사용함.
+
+=== DNS Query Flow
+
+- Local DNS 에 캐싱이 되어 있는 경우는 바로 응답
+- 캐싱이 되어 있지 않은 경우에
+  - ROOT DNS, TLD DNS, Authoratative DNS 순서로 질의하여 결과 응답
+
+==== Exam-01. nslookup
+
+nslookup 명령을 이용해 dns의 역할을 알아보자.
+
+[source,console]
+----
+$ nslookup gmail.com
+$ nslookup -q=a gmail.com
+$ nslookup -q=mx gmail.com
+$ nslookup -q=ns gmail.com
+$ nslookup -q=mx gmail.com ns1.google.com
+$ sudo /usr/sbin/tcpdump -nnn -X -i eth0 udp port 53
+$ cat /etc/resolv.conf
+----
