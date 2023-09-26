@@ -94,7 +94,7 @@ image::https://upload.wikimedia.org/wikipedia/commons/f/f8/EthernetFrame.jpg[]
 
 == 다음 홉의 MAC 주소는 어떻게 알 수 있을까?
 
-iamge::https://upload.wikimedia.org/wikipedia/commons/f/f8/EthernetFrame.jpg[]
+image::https://upload.wikimedia.org/wikipedia/commons/f/f8/EthernetFrame.jpg[]
 
 == 다음 홉의 MAC 주소는 어떻게 알 수 있을까?
 
