@@ -39,21 +39,21 @@ Options:
 +
 [source,console]
 ----
-~$ scurl http://httpbin.org/get
+~$ java scurl http://httpbin.org/get
 ----
 +
 2. Method명을 명시적으로 GET 요청
 +
 [source,console]
 ----
-~$ scurl -X GET http://httpbin.org/get
+~$ java scurl -X GET http://httpbin.org/get
 ----
 +
 3. Request/Response header 출력
 +
 [source,console]
 ----
-~$ scurl -X GET http://httpbin.org/get
+~$ java scurl -v -X GET http://httpbin.org/get
 ----
 +
 4. X-Custom-Header: NA를 request header에 추가
@@ -78,7 +78,7 @@ Options:
 --
 [source, console]
 ----
-~$ scurl -V -L http://httpbin.org/status/302
+~$ scurl -v -L http://httpbin.org/status/302
 ----
 * 302 응답을 받고, 응답에 지정된 Location을 따라 간다.
 ** 지정된 Location에 다시 요청했을 때, 301, 302, 307, 308 응답이 나오면 다시 따라간다.

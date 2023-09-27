@@ -91,7 +91,7 @@ image::https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.j
 
 [source,console]
 ----
-<scheme>://<username>:<password>@<host>:<port>/<path>?<query>#<fragment>
+<scheme>://[<username>:<password>@]<host>[:<port>]<Request-URI>[?<query>#<fragment>]
 ----
 
 === 보기
@@ -103,7 +103,7 @@ image::https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.j
 
 * scheme: `https`, `http`, `ftp`, `file` (= protocol)
 * host: `nhnent.dooray.com` (= server)
-* path: `/project/to`
+* request URI: `/project/to`
 * query: `userWorkflowClass=registered,working`
 
 == HTTP (HyperText Transfer Protocol)
@@ -232,7 +232,7 @@ http://test-vm.com:3000/welcome.html
 
 [source,console]
 ----
-<Method> <Request URL> <Version>
+<Method> <Request URI> <Version>
 <Header>
 
 <Body>
@@ -265,7 +265,7 @@ If-Modified-Since: Sat, 15 Jan 2022 18:23:48 GMT
 ** DELETE
 ** TRACE
 
-* **Request URL**
+* **Request URI**
 
 ** `/welcome.html`
 
