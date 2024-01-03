@@ -22,3 +22,5 @@ image::../image/node-red_echo_server.png[align="center"]
 * 송수신 데이터의 분산(?)으로 인한 속도 저하 문제 해결을 위해서는 BufferedReader, BufferedWriter를 이용하자.
 
 * Buffered에 저장된 데이터는 flush()를 이용해 즉시 보낼 수 있다.
+
+link:../4.Java_Socket_Communication.adoc[돌아가기]

@@ -12,12 +12,13 @@
 === Stream Sockets
 
 * Connection-oriented Sockets
-  * TCP(Transmission Control Protocol)
-  * SCTP(Stream Control Transmission Protocol) 
-  * DCCP(Datagram Congestion Control Protocol)
+** TCP(Transmission Control Protocol)
+** SCTP(Stream Control Transmission Protocol) 
+** DCCP(Datagram Congestion Control Protocol)
 
 * 오류 없는 데이터 전송, packet 순서, 흐름 제어 보장
-* 인터넷에서 일반적으로 TCP를 사용하여 구현되므로 응용 프로그램이 TCP/IP 프로토콜을 사용하여 네트워크를 통해 실행될 수 있음
+* 인터넷에서 일반적으로 TCP를 사용하여 구현
+** Application에서 TCP/IP 프로토콜을 사용하여 통신
 * 송신된 순서에 따라 중복되지 않게 데이터를 수신함으로 이에 따른 overhead 발생
 
 {empty} + 

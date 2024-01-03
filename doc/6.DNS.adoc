@@ -51,3 +51,5 @@ $ nslookup -q=mx gmail.com ns1.google.com
 $ sudo /usr/sbin/tcpdump -nnn -X -i eth0 udp port 53
 $ cat /etc/resolv.conf
 ----
+
+link:index.adoc[돌아가기]

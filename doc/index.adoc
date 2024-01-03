@@ -1,9 +1,9 @@
 = Java Network Programming
 
-1. link:1.Socket이란.adoc[Socket 이란?]
+1. link:1.Network_Socket.adoc[Socket 이란?]
 2. link:2.Socket_type.adoc[Socket Type]
-3. link:3.Socket_통신.adoc[Socket 통신]
-4. link:4.Java_Socket_통신.adoc[Java Socket 통신]
+3. link:3.Socket_Communication.adoc[Socket 통신]
+4. link:4.Java_Socket_Communication.adoc[Java Socket 통신]
 5. link:5.Computer_Network.adoc[Computer Network]
 6. link:6.DNS.adoc[DNS]
 7. link:7.L7_Application_Layer.adoc[L7 Application Layer]

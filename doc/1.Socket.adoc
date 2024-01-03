@@ -1,0 +1,17 @@
+== Socket
+
+**일반적으로 socket 통신은 network상에서 사용되는 network socket을 말한다**
+
+* Network를 통해 데이터를 주고 받기 위한 endpoint(엔드포인트)
+** 서비스별로 엔드포인트가 존재하고, 해당 서비스 통신을 위해서는 해당 엔드포인트에 연결
+* Internet Socket
+** Protocol(프로토콜), IP address(IP 주소), port number(포트)로 정의됨
+*** Protocol: 다른 시스템과 원활한 통신을 위한 통신 규약
+*** IP address: Internet Protcol 통신을 위한 고유 식별 번호
+*** Port number: 각 host별로 특정 서비스를 위해 지정되고, 네트워크 통신에서 특정 서비스 연결을 위해 사용되는 값으로 단일 host내에서 서로 다른 서비스간 공유할 수 없다.
+* 특정 port 번호를 같는 socket은 잘 알려진 서비스와 연관됨
+** 80: HTTP
+** 22: ssh
+** 443: HTTPS
+* 잘 알려진 서비스를 특정 port 번호외 다른 port 번호로 변경 가능
+** 특별한 목적으로 web service를 80이 아닌 8080으로 설정 가능
