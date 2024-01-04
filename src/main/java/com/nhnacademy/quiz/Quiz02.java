@@ -29,7 +29,8 @@ public class Quiz02 {
             // try-with-resources
             try (Socket socket = new Socket("localhost", port)) {
                 System.out.println("Port " + port + " 열려 있습니다.");
-            } catch (IOException ignore) {
+            } catch (IOException e) {
+                System.err.println(e.getMessage());
             }
         }
     }

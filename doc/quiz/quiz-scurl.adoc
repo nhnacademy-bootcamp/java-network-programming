@@ -60,7 +60,7 @@ Options:
 +
 [soruce,console]
 ----
-~$ scurl -v -H "X-Custom-Header: NA" http://httpbin.org/get
+~$ java scurl -v -H "X-Custom-Header: NA" http://httpbin.org/get
 ----
 +
 5. POST 요청
@@ -68,7 +68,7 @@ Options:
 --
 [source,console] 
 ----
-~$ scurl -v -X POST -d "{\"hello\": \"world\"}" -H "Content-Type: application/json" http://httpbin.org/post
+~$ java scurl -v -X POST -d "{\"hello\": \"world\"}" -H "Content-Type: application/json" http://httpbin.org/post
 ----
 * POST body는 -d로 지정
 --
@@ -78,7 +78,7 @@ Options:
 --
 [source, console]
 ----
-~$ scurl -v -L http://httpbin.org/status/302
+~$ java scurl -v -L http://httpbin.org/status/302
 ----
 * 302 응답을 받고, 응답에 지정된 Location을 따라 간다.
 ** 지정된 Location에 다시 요청했을 때, 301, 302, 307, 308 응답이 나오면 다시 따라간다.
@@ -91,7 +91,7 @@ Options:
 --
 [source,console]
 ----
-~$ scurl -F "upload=@file_path" http://httpbin.org/post
+~$ java scurl -F "upload=@file_path" http://httpbin.org/post
 ----
 * file_path에 저정된 파일을 multipart/form-data로 전송한다.
 --

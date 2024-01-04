@@ -1,3 +1,5 @@
+[[header, 시작]]
+
 == Java Socket Communication
 
 Java에서는 socket 통신을 위해 Socket class와 서버 구성을 위한 ServerSocket class를 지원하며, 아래와 같이 동작한다.
@@ -158,4 +160,4 @@ link:quiz/quiz-12.adoc[Quiz-12. Client에서 보내온 메시지를 접속한 �
 link:quiz/quiz-13.adoc[Quiz-13. Client에서 보내온 메시지를 접속한 모든 client 또는 특정 client에 전송할 수 있도록 multi-chatting client/server를 만들어 보자.]
 
 
-link:index.adoc[돌아가기]
+<<header>> link:index.adoc[돌아가기]

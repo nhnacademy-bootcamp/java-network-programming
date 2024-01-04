@@ -1,4 +1,4 @@
-== Socket Type
+== Socket 종류
 
 
 === Datagram Sockets
