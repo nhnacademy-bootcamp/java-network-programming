@@ -1,10 +1,10 @@
 = Transport Layer
 
-Transport layer은 데이터 패킷이 전송 순서대로 받아지고 데이터가 손실되거나 손상되지 않도록 보장하는 역할을 한다. 패킷이 손실된 경우, 전송 계층은 송신자에게 패킷 재전송을 요청할 수 있다. IP 네트워크에서는 이를 각 데이터그램에 추가 정보를 포함하는 추가 헤더를 추가함으로써 구현한다. 
+Transport layer은 데이터 패킷이 전송 순서대로 받아지고 데이터가 손실되거나 손상되지 않도록 보장하는 역할을 한다. 패킷이 손실된 경우, 전송 계층은 송신자에게 패킷 재전송을 요청할 수 있다. IP 네트워크에서는 이를 각 데이터그램에 추가 정보를 포함하는 추가 헤더를 추가함으로써 구현한다.
 
-이 수준에서는 두 가지 주요 프로토콜이 있다. 
+이 수준에서는 두 가지 주요 프로토콜이 있다.
 
-1. Transmission Control Protocol (TCP)이 있는데, 이는 높은 오버헤드 프로토콜로서 손실된 데이터나 손상된 데이터의 재전송 및 전송된 바이트의 순서대로 전달을 허용한다. 
+1. Transmission Control Protocol (TCP)이 있는데, 이는 높은 오버헤드 프로토콜로서 손실된 데이터나 손상된 데이터의 재전송 및 전송된 바이트의 순서대로 전달을 허용한다.
 
 2. User Datagram Protocol (UDP)로, 수신자는 손상된 패킷을 감지할 수 있지만 패킷이 올바른 순서로 전달되는 것을 (또는 아예 전달되는 것을) 보장하지 않는다. 그러나 UDP는 종종 TCP보다 빠르다. TCP는 신뢰성 있는 프로토콜로, UDP는 신뢰성 없는 프로토콜이다. 나중에 신뢰성 없는 프로토콜이 앞서 이야기한 것보다 훨씬 유용하다는 것을 보게 될 것이다.
 
@@ -20,18 +20,18 @@ Transport layer은 데이터 패킷이 전송 순서대로 받아지고 데이�
 ----
 Format
 
-                                    
-                  0      7 8     15 16    23 24    31  
-                 +--------+--------+--------+--------+ 
-                 |     Source      |   Destination   | 
-                 |      Port       |      Port       | 
-                 +--------+--------+--------+--------+ 
-                 |                 |                 | 
-                 |     Length      |    Checksum     | 
-                 +--------+--------+--------+--------+ 
-                 |                                     
-                 |          data octets ...            
-                 +---------------- ...                 
+
+                  0      7 8     15 16    23 24    31
+                 +--------+--------+--------+--------+
+                 |     Source      |   Destination   |
+                 |      Port       |      Port       |
+                 +--------+--------+--------+--------+
+                 |                 |                 |
+                 |     Length      |    Checksum     |
+                 +--------+--------+--------+--------+
+                 |
+                 |          data octets ...
+                 +---------------- ...
 
                       User Datagram Header Format
 ----
@@ -49,9 +49,9 @@ Format
 ----
   TCP Header Format
 
-                                    
-    0                   1                   2                   3   
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
+
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
    |          Source Port          |       Destination Port        |
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -175,7 +175,7 @@ image::image/time_wait2.png[title="TIME_WAIT",align=center]
 
 [source,cosole]
 ----
-$ netstat -nat 
+$ netstat -nat
 $ watch "netstat -nat"
 ----
 
@@ -223,4 +223,5 @@ $ nc localhost 10000
 image::https://upload.wikimedia.org/wikipedia/commons/2/24/TCP_Slow-Start_and_Congestion_Avoidance.svg[]
 *from wikimedia https://commons.wikimedia.org/wiki/File:TCPSlow-StartandCongestionAvoidance.svg*
 
-link:index.adoc[돌아가기]
+---
+link:00.index.adoc[돌아가기]

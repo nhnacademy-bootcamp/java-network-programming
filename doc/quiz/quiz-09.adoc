@@ -13,4 +13,5 @@
 
 * Client 연결이 끊어지면, server socket을 닫고 프로그램을 종료한다.
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

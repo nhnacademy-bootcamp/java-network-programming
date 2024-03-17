@@ -33,7 +33,7 @@ link:quiz/quiz-01.adoc[Quiz-01. Server에 연결 가능한 port가 무엇이 있
 
 ==== 자원 관리하기
 
-컴퓨터는 유한한 자원을 가지고 운영된다. 따라서, 컴퓨터에서 운영되는 프로그램을 만들때 주의해야 할 점 중 하나가 자원 관리 문제이다. 
+컴퓨터는 유한한 자원을 가지고 운영된다. 따라서, 컴퓨터에서 운영되는 프로그램을 만들때 주의해야 할 점 중 하나가 자원 관리 문제이다.
 
 Socket은 유한한 자원 중 하나로 생성 가능한 수가 제한되어 있고, 필요시 조정 가능하다.
 
@@ -120,11 +120,11 @@ Server socket을 통해 client 접속 후 생성되는 socket을 통해서도 �
 
 link:quiz/quiz-08.adoc[Quiz-08. Server socket에서 client 접속 후 생성된 socket을 이용해 client  정보(host, port)를 확인하자]
 
-{empty} + 
+{empty} +
 
 ==== Echo Server
 
-Client socket에서 Node-RED를 이용해 echo server를 구성하였다. 
+Client socket에서 Node-RED를 이용해 echo server를 구성하였다.
 이를 server socket을 이용해 구성해 보도록 하자.
 
 link:quiz/quiz-09.adoc[Quiz-09. Echo Server 만들어 보자]
@@ -137,7 +137,7 @@ link:quiz/quiz-10.adoc[Quiz-10. 반복 연결이 가능한 Echo Server 만들어
 
 Server socket은 port를 통해 대기 상태에서 client가 연결되면 통신을 위한 socket을 생성함으로써 기본 기능을 완료하고 연결된 client가 끊어진 후 accept() 함수를 통해 다시 할 수 있다.
 
-이는 client가 연속적으로 연결될 수 있으나, 동시에 여러 client가 연결되지는 못한다. 
+이는 client가 연속적으로 연결될 수 있으나, 동시에 여러 client가 연결되지는 못한다.
 
 동시에 다수의 client가 연결할 수 있도록 thread를 통해 분리해 보도록 하자.
 
@@ -159,5 +159,5 @@ link:quiz/quiz-12.adoc[Quiz-12. Client에서 보내온 메시지를 접속한 �
 
 link:quiz/quiz-13.adoc[Quiz-13. Client에서 보내온 메시지를 접속한 모든 client 또는 특정 client에 전송할 수 있도록 multi-chatting client/server를 만들어 보자.]
 
-
-<<header>> link:index.adoc[돌아가기]
+---
+link:00.index.adoc[돌아가기]

@@ -1,10 +1,10 @@
 == Quiz-05. Client socket을 server에 연결하여 server에서 보내오는 문자열을 출력하라.
 
-{empty} + 
+{empty} +
 
 앞 예제를 통해서 간단하게 data 수신 방법에 대해 배웠다.
 
-{empty} + 
+{empty} +
 
 === 요구 사항
 
@@ -15,7 +15,7 @@
 * 받은 문자열이 "exit"인 경우, 프로그램을 종료한다.
 * 받은 문자열이 "exit"이 아닌 경우, 출력한다.
 * 프로그램은 ip address와 port를 옵션으로 받을 수 있다.
-** java Quiz04 
+** java Quiz04
 ** java Quiz04 localhost
 ** java Quiz04 localhost 1234
 * 기본 ip address는 localhost로 하고, 기본 port는 1234로 한다.
@@ -26,4 +26,5 @@
 ~$ nc -l 1234
 ----
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

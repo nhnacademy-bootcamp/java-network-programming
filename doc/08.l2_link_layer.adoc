@@ -67,7 +67,7 @@ EtherType  Protocol
 0x0800 	   Internet Protocol version 4 (IPv4)
 0x0806 	   Address Resolution Protocol (ARP)
 0x0842 	   Wake-on-LAN
-0x22F0 	   Audio Video Transport Protocol (AVTP) 
+0x22F0 	   Audio Video Transport Protocol (AVTP)
 0x8137 	   IPX
 0x86DD 	   Internet Protocol Version 6 (IPv6
 ```
@@ -119,7 +119,7 @@ image::https://upload.wikimedia.org/wikipedia/commons/f/f8/EthernetFrame.jpg[]
 Destination MAC: FF FF FF FF FF FF
 Source MAC     : {나 자신, 알고 있음}
 EtherType      : 0x0806 ARP
-ARP Protocol   : 
+ARP Protocol   :
 ----
 
 *from. https://en.wikipedia.org/wiki/AddressResolutionProtocol*
@@ -131,18 +131,40 @@ ARP Protocol   :
 
 == Ethernet 토폴로지
 
-* Bus 형
+image::./image/topologies.png[Topologies]
+
+* Bus
 ** 전체가 collision domain
-* Star 형 - 스위치 방식 (현재)
+* Star - 스위치 방식 (현재)
+** 중앙 허브나 라우터에서 연결
 ** 스위치가 collision 도메인을 분리해줌
 ** collision 에 대한 교통 정리 기능
+* Tree
+** 노드가 트리형태로 구성
+** 계층적 망 구성시 적용
+* Ring
+** 폐쇄 루프의 데이지 체인
+** 데이터는 링을 중심으로 한 방향으로 이동
 
 == 스위치
 
 * 네트워크 관점에서 스위치는 보이지 않는 존재
 ** IP 도 없고,
-** MAC 도 없고,
+** MAC 도 없고
+* 하지만, L2, L3, L4 스위치등 각 layer별로 처리하는 스위치가 사용됨
+** L2 스위치는 MAC 주소를 가지고 있으면서 해당 포트로 패킷을 전달
+** L3 스위치는 IP 주소를 가지고 있으면서 해당 포트로 패킷을 전달(Router)
+
+* L3 Switch
+** L3 스위치는 라우팅 기능을 수행할 수 있는 네트워크 스위치
+** OSI model의 네트워크 계층(layer 3계에서 작동하며 IP 주소를 사용하여 라우팅 결정
+** MAC address를 기반으로만 트래픽을 전달하는 기존 스위치(L2 switch)와 달리 L3 스위치는 서로 다른 VLAN 또는 서브넷 간에 트래픽을 라우팅할 수 있음
+** 이점
+*** 브로드캐스트 트래픽을 줄여 네트워크 성능 향
+*** 네트워크를 더 작은 subnet으로 분할하고 VLAN을 사용하면 브로드캐스트 트래픽이 각 subnet 내에 포함되어 정체가 줄어들고 전반적인 효율성 향상
+*** OSPF, BGP 등 여러 프로토콜을 지원하므로 기업 네트워크, 데이터 센터, 서비스 제공업체 네트워크 등 다양한 환경에서 사용 가능
 
 == 스위치를 포함한 구성
 
-link:index.adoc[돌아가기]
+---
+link:00.index.adoc[돌아가기]

@@ -14,7 +14,7 @@
 ----
 2. Socket을 생성한다.
 * Server IP address는 localhost로 지정한다.
-* Server port는 nc에서 설정한 12345로 지정한다. 
+* Server port는 nc에서 설정한 12345로 지정한다.
 +
 [source,java]
 ----
@@ -61,13 +61,13 @@ netcat을 실행한 후 확인해 보자.
 [source,console]
 ----
 ~$ ss -ltn
-State   Recv-Q  Send-Q   Local Address:Port       Peer Address:Port        Process        
+State   Recv-Q  Send-Q   Local Address:Port       Peer Address:Port        Process
 
 LISTEN  0       4096      127.0.0.1:8088           0.0.0.0:*
 LISTEN  0       1         0.0.0.0:12345            0.0.0.0:*
 LISTEN  0       511       127.0.0.1:41659          0.0.0.0:*
 LISTEN  0       4096      127.0.0.53%lo:53         0.0.0.0:*
-LISTEN  0       50        [::ffff:127.0.0.1]:64120 *:*     
+LISTEN  0       50        [::ffff:127.0.0.1]:64120 *:*
 LISTEN  0       4096      *:8086                   *:*
 ----
 Client 연결을 위한 port 12345가 열려 있음을 확인할 수 있고, 이후 다시 실행해 보자.
@@ -78,7 +78,6 @@ Client 연결을 위한 port 12345가 열려 있음을 확인할 수 있고, 이
 ~$ java Exam01
 서버에 연결되었습니다.
 ----
---
-+
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

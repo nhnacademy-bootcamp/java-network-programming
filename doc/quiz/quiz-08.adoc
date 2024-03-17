@@ -28,4 +28,5 @@ Client[127.0.0.1:38832]가 연결되었습니다.
 Client[127.0.0.1:12612]가 연결되었습니다.
 ----
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

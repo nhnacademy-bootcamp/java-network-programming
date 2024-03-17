@@ -2,7 +2,7 @@
 
 curlfootnote:[https://curl.se/[curl - transfer a URL]] 프로그램이 있다. 이 프로그램과 유사하게 동작하는 simple-curl을 만들어 보자.
 
-{empty} + 
+{empty} +
 
 === 요구 사항
 
@@ -15,7 +15,7 @@ scurl은 다음과 같이 동작합니다.
 * 응답의 ContentType을 확인하여 "text/*", "application/json"만 화면에 출력한다.
 * POST, PUT의 경우 -H로 Content-Type이 지정되지 않으면, application/x-www-form-urlencoded 를 기본 타입으로 사용한다.
 
-{empty} + 
+{empty} +
 
 === 사용법
 
@@ -66,7 +66,7 @@ Options:
 5. POST 요청
 +
 --
-[source,console] 
+[source,console]
 ----
 ~$ java scurl -v -X POST -d "{\"hello\": \"world\"}" -H "Content-Type: application/json" http://httpbin.org/post
 ----

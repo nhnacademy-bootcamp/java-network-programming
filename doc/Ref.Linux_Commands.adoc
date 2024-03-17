@@ -9,4 +9,5 @@
 ** -t --tcp : tcp 소켓 정보 출력
 ** -n --numeric : 소켓 정보를 서비스 이름(별도 파일 - /etc/services)이 아닌 숫자로 표시
 
-link:index.adoc[돌아가기]
+---
+link:00.index.adoc[돌아가기]

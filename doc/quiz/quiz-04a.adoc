@@ -1,6 +1,6 @@
 == Quiz-04A. Client socket을 server에 연결하여 data를 보내고, exit가 입력되면 프로그램을 종료한다.
 
-{empty} + 
+{empty} +
 
 아래와 과정을 따라 server 연결 후 data 전송 방법을 알아 보자.
 
@@ -61,8 +61,12 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[tags="closeSocket",
 {empty} +
 
 ==== Source Code
+
 [source,java]
 ----
 include::../../src/main/java/com/nhnacademy/quiz/Quiz04.java[데이터 보내기]
 ----
 
+
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

@@ -14,4 +14,5 @@
 * Client 연결이 끊어지면, server는 대기 상태로 다음 연결을 기다린다.
 
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../04.java_socket_Communication.adoc[돌아가기]

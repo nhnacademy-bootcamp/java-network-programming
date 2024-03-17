@@ -1,6 +1,6 @@
 == Quiz-05-A. Client socket을 server에 연결하여 문자열 data를 받아 출력하고, 문자열 데이터가 exit이면 종료한다.
 
-{empty} + 
+{empty} +
 
 === 과정
 
@@ -84,7 +84,7 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="socketClose",
 --
 +
 
-{empty} + 
+{empty} +
 
 ==== Source Code
 
@@ -93,3 +93,5 @@ include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[tags="socketClose",
 include::../../src/main/java/com/nhnacademy/quiz/Quiz05.java[데이터 보내기]
 ----
 
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

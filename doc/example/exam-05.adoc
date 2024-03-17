@@ -25,8 +25,8 @@ include::../../src/main/java/com/nhnacademy/example/Exam05.java[lines=11,indent=
 ...
 include::../../src/main/java/com/nhnacademy/example/Exam05.java[lines=18..20,indent=0]
 ----
-* try-with-resources 
-footnote:[https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html[Oracle Tutorials : The try-with-resources Statement]] 
+* try-with-resources
+footnote:[https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html[Oracle Tutorials : The try-with-resources Statement]]
 footnote:[https://www.baeldung.com/java-try-with-resources[Baeldung : Java – Try with Resources]]
 를 이용해 serverSocket을 close 하지 않고 종료하는 것을 방지한다.
 --
@@ -54,7 +54,7 @@ include::../../src/main/java/com/nhnacademy/example/Exam05.java[lines=18..20,ind
 ~$ java Exam05
 java.net.BindException: Address already in use (Bind failed)
 ----
-* BindException은 IOException의 extend class로서 IOException으로 catch 가능하다. 
+* BindException은 IOException의 extend class로서 IOException으로 catch 가능하다.
 --
 +
 
@@ -65,4 +65,6 @@ java.net.BindException: Address already in use (Bind failed)
 include::../../src/main/java/com/nhnacademy/example/Exam05.java[]
 ----
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

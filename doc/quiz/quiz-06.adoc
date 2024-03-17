@@ -23,4 +23,5 @@ image::../image/node-red_echo_server.png[align="center"]
 
 * Buffered에 저장된 데이터는 flush()를 이용해 즉시 보낼 수 있다.
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

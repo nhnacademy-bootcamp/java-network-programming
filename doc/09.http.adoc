@@ -7,7 +7,7 @@
 
 * Hyperlink를 통해 한 문서에서 다른 문서로 즉시 접근할 수 있는 텍스트
 * 1960년대 컴퓨터 개척자이자 철학자인 테드 넬슨이 처음 고안하여 쓰이게 되었다
-* 일반적으로 마우스 클릭, 키 누르기 세트 또는 화면 터치 에 의해 활성화되는 hyperlink로 상호 연결된다 
+* 일반적으로 마우스 클릭, 키 누르기 세트 또는 화면 터치 에 의해 활성화되는 hyperlink로 상호 연결된다
 
 image::image/Sistema_hipertextual.jpg[align=center]
 
@@ -127,7 +127,7 @@ $ sudo nano /etc/hosts
 +
 [source,console]
 ----
-127.0.0.1 test-vm.com 
+127.0.0.1 test-vm.com
 ----
 2. HTTP Server 실행하기
 +
@@ -135,13 +135,13 @@ $ sudo nano /etc/hosts
 +
 [source,console]
 ----
-$ python -m SimpleHTTPServer 3000  
+$ python -m SimpleHTTPServer 3000
 ----
 * python3
 +
 [source,console]
 ----
-$ python3 -m http.server 3000  
+$ python3 -m http.server 3000
 ----
 3. HTTP Server 동작 확인하기
 +
@@ -901,7 +901,8 @@ TLS_DH_RSA_WITH_AES_128_CBC_SHA         DH_RSA       AES_128_CBC  SHA
 
 === 암호화 알고리즘
 
-```
+[source,console]
+----
 $ curl -v https://nhnent.dooray.com
 * Rebuilt URL to: https://nhnent.dooray.com/
 *   Trying 43.227.118.171...
@@ -952,6 +953,7 @@ $ curl -v https://nhnent.dooray.com
 < x-ua-compatible: IE=Edge
 <
 * Connection #0 to host nhnent.dooray.com left intact
-```
+----
 
-link:index.adoc[돌아가기]
+---
+link:00.index.adoc[돌아가기]

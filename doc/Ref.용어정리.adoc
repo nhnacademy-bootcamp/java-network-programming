@@ -6,4 +6,7 @@
 * https://en.wikipedia.org/wiki/Fully_qualified_domain_name#relative%20domain%20names[PQDN(Partially Qualified Domain Name)]
 ** Relative Domain Name
 ** DNS root에 대해 모든 레이블을 포함하지 않는다.
-** Hostname을 사용 가능
+** Hostname을 사용 가
+
+---
+link:00.index.adoc[돌아가기]

@@ -13,4 +13,5 @@
 
 * Server는 하나 이상의 client가 접속되어도 동시에 지원 가능하도록 한다.
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

@@ -35,7 +35,7 @@ Remote port : 8086
 +
 [source,console]
 ----
-~$ java Quiz03 192.168.100.100 
+~$ java Quiz03 192.168.100.100
 192.168.100.100:1234에 연결할 수 없습니다.
 ----
 +
@@ -43,7 +43,7 @@ Remote port : 8086
 +
 [source,console]
 ----
-~$ java Quiz03 
+~$ java Quiz03
 localhost:1234에 연결할 수 없습니다.
 ----
 
@@ -53,11 +53,13 @@ localhost:1234에 연결할 수 없습니다.
 [source, console]
 ----
 ~$ ss -tn
-State    Recv-Q  Send-Q Local Address:Port  Peer Address:Port  Process             
+State    Recv-Q  Send-Q Local Address:Port  Peer Address:Port  Process
 ESTAB    0       0      127.0.0.1:46802     127.0.0.1:41659
 ESTAB    0       24     127.0.0.1:41659     127.0.0.1:46802
 ESTAB    0       0      127.0.0.1:41659     127.0.0.1:46808
 ESTAB    0       0      127.0.0.1:46808     127.0.0.1:41659
 ----
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

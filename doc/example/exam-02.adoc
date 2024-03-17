@@ -52,4 +52,5 @@ include::../../src/main/java/com/nhnacademy/example/Exam02.java[데이터 보내
 ----
 
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

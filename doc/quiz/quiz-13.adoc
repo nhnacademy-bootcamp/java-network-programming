@@ -22,9 +22,9 @@
 
 아래의 요구 사항에 맞는 client를 구현해 보자.
 
-* 실행시 서비스를 위한 id, host, port를 지정할 수 있다. 
+* 실행시 서비스를 위한 id, host, port를 지정할 수 있다.
 
-* 별도의 지정이 없는 경우, 
+* 별도의 지정이 없는 경우,
 ** id는 임의의 문자열로 생성한다.
 ** host는 localhost
 ** port는 1234로 한다.
@@ -35,4 +35,5 @@
 * 제어 명령을 구현한다.
 ** !exit 명령은 clie은 연결을 끊는다.
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

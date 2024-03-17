@@ -11,6 +11,8 @@ Java에서는 GC(Garbage Collection)이 지원되어 별도의 해제가 없더�
 * try-with-resources를 이용할 경우, 어떠한 장점과 어떠한 단점이 있는지 생각해 보자.
 
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+
+---
+link:../02.java_socket_Communication.adoc[돌아가기]
 
 

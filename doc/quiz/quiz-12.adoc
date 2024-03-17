@@ -12,4 +12,5 @@
 
 * Client에서 보내온 메시지는 접속되어 있는 모든 client에 전달한다.
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]

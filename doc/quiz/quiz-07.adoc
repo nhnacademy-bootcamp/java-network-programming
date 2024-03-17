@@ -10,4 +10,5 @@
 
 * 두 동작의 개별 동작은 thread를 이용해 구현 가능하다.
 
-link:../4.Java_Socket_Communication.adoc[돌아가기]
+---
+link:../02.java_socket_Communication.adoc[돌아가기]
